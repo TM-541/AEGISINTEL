@@ -156,25 +156,35 @@ CSS = f"""
       font-size: .78rem; font-weight: 600; }}
   .tl-muted {{ color: {PALETTE["muted"]}; }}
   div[data-testid="stMetricValue"] {{ font-size: 1.8rem; }}
-  /* Form fields: visible outline at rest, brighter on hover, accent ring on focus. */
-  div[data-baseweb="input"], div[data-baseweb="textarea"], div[data-baseweb="select"] > div,
-  div[data-testid="stDateInputField"], div[data-testid="stNumberInputContainer"] {{
+  /* Form fields: visible outline at rest, brighter on hover, accent ring on focus.
+     Streamlit >= 1.5x renders inputs with data-testid root elements; older/select widgets
+     still use BaseWeb, so both are covered. Verified in a real browser (README screenshots). */
+  div[data-testid="stTextInputRootElement"], div[data-testid="stTextAreaRootElement"],
+  div[data-testid="stNumberInputContainer"], div[data-testid="stDateInputField"],
+  div[data-testid="stDateTimeInputField"],
+  div[data-baseweb="input"], div[data-baseweb="textarea"], div[data-baseweb="select"] > div {{
       background-color: {PALETTE["field"]} !important;
       border: 1px solid {PALETTE["field_border"]} !important;
       border-radius: 8px !important;
       transition: border-color .15s ease, box-shadow .15s ease; }}
-  div[data-baseweb="input"]:hover, div[data-baseweb="textarea"]:hover,
-  div[data-baseweb="select"] > div:hover {{
+  div[data-testid="stTextInputRootElement"]:hover, div[data-testid="stTextAreaRootElement"]:hover,
+  div[data-testid="stNumberInputContainer"]:hover, div[data-baseweb="input"]:hover,
+  div[data-baseweb="textarea"]:hover, div[data-baseweb="select"] > div:hover {{
       border-color: {PALETTE["field_border_hover"]} !important; }}
+  div[data-testid="stTextInputRootElement"]:focus-within,
+  div[data-testid="stTextAreaRootElement"]:focus-within,
+  div[data-testid="stNumberInputContainer"]:focus-within,
   div[data-baseweb="input"]:focus-within, div[data-baseweb="textarea"]:focus-within,
   div[data-baseweb="select"] > div:focus-within {{
       border-color: {PALETTE["accent"]} !important;
       box-shadow: 0 0 0 3px rgba(56,214,196,.18) !important; }}
+  div[data-testid="stTextInputRootElement"] input, div[data-testid="stTextAreaRootElement"] textarea,
+  div[data-testid="stNumberInputContainer"] input,
   div[data-baseweb="input"] > div, div[data-baseweb="base-input"],
-  div[data-baseweb="input"] input, div[data-baseweb="textarea"] textarea,
-  div[data-testid="stNumberInputContainer"] div[data-baseweb="input"] {{
+  div[data-baseweb="input"] input, div[data-baseweb="textarea"] textarea {{
       background-color: transparent !important; }}
-  div[data-testid="stNumberInputContainer"] div[data-baseweb="input"] {{
+  div[data-testid="stNumberInputContainer"] div[data-baseweb="input"],
+  div[data-testid="stNumberInputContainer"] div[data-testid="stTextInputRootElement"] {{
       border: none !important; box-shadow: none !important; }}
   input::placeholder, textarea::placeholder {{ color: {PALETTE["muted"]} !important;
       opacity: 1; }}
