@@ -171,8 +171,30 @@ def test_form_fields_are_visible_before_focus():
     assert ratio(PALETTE["text"], PALETTE["field"]) >= 4.5  # typed text
     assert ratio(PALETTE["muted"], PALETTE["field"]) >= 4.5  # placeholders
     assert PALETTE["field"] != PALETTE["panel"]  # the well differs from the card
-    for selector in ('div[data-baseweb="input"]', 'div[data-baseweb="textarea"]', ":focus-within"):
+    for selector in ('div[data-testid="stTextInputRootElement"]', ":focus-within"):
         assert selector in CSS
+
+
+def test_field_selectors_exist_in_installed_streamlit_frontend():
+    """Regression: v1.0.0 styled BaseWeb selectors that Streamlit 1.66 no longer renders, so
+    fields stayed invisible while the colour test passed. Every field test id the theme targets
+    must exist in the installed frontend bundle, so a Streamlit upgrade that renames them fails here.
+    """
+    import re
+
+    import streamlit
+
+    from threatlens.ui.theme import CSS
+
+    bundle = "".join(
+        p.read_text(encoding="utf-8", errors="ignore")
+        for p in (Path(streamlit.__file__).parent / "static").rglob("*.js")
+    )
+    targeted = set(re.findall(r'data-testid="(st\w+)"', CSS))
+    fields = {t for t in targeted if any(k in t for k in ("Input", "TextArea", "Select", "Date"))}
+    assert {"stTextInputRootElement", "stTextAreaRootElement", "stSelectbox"} <= fields
+    missing = sorted(t for t in fields if t not in bundle)
+    assert not missing, f"theme targets test ids this Streamlit does not render: {missing}"
 
 
 # --- phase 2: every incident type and populated report/approval states render cleanly ------

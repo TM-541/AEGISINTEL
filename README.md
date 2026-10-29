@@ -17,12 +17,27 @@ know, and never treats "no detection" as proof that an environment is safe.
 > **End users:** read **[USER_MANUAL.txt](USER_MANUAL.txt)** for complete, step-by-step
 > instructions. This README is for developers and reviewers.
 
-> **Status: v1.0.** Built for single-analyst workstations, labs and evaluation. It runs
+> **Status: v1.0.1.** Built for single-analyst workstations, labs and evaluation. It runs
 > entirely on your machine and ships with synthetic sample data only. Read
 > [Known limitations](#known-limitations) and [SECURITY.md](SECURITY.md) before using it with
 > real telemetry.
 
+<p align="center">
+  <img src="docs/screenshots/workspace.png" alt="Investigation workspace: severity, confidence, detection status and verdict shown separately" width="900">
+</p>
+
 ---
+
+## Screenshots
+Captured from a real running instance loaded with the bundled **synthetic** sample data.
+The AI report shown is a real `llama3.2:3b` output (local Ollama, CPU) that passed validation.
+
+| | |
+|---|---|
+| ![Sign in](docs/screenshots/login.png) **Sign-in:** server-side sessions, Argon2id | ![Overview](docs/screenshots/overview.png) **Overview:** incidents by severity and detection layer |
+| ![Incident queue](docs/screenshots/incident_queue.png) **Incident queue:** severity, confidence, detection and verdict as separate columns | ![Behavioural indicators](docs/screenshots/workspace_behaviour.png) **Behavioural indicators:** explained baselines; scores are anomaly strength, not probability |
+| ![Evidence timeline](docs/screenshots/timeline.png) **Evidence & timeline:** every event traceable to its original record | ![AI report](docs/screenshots/ai_report.png) **AI report:** validated output, plus a deterministic prompt-injection warning |
+| ![Behavioural analytics](docs/screenshots/detections_behaviour.png) **Behavioural analytics:** detector logic, thresholds and coverage gaps | ![Workspace](docs/screenshots/workspace.png) **Workspace:** rule findings, ATT&CK review, related incidents, simulated response |
 
 ## What makes it different
 
@@ -133,7 +148,7 @@ The full walkthrough, troubleshooting and the backup and reset procedure are in
 
 ## Quality gates (latest recorded results, see [TESTING.md](TESTING.md))
 ```powershell
-.venv\Scripts\python.exe -m pytest                         # 289 passed, 2 deselected (opt-in live tests)
+.venv\Scripts\python.exe -m pytest                         # 290 passed, 2 deselected (opt-in live tests)
 .venv\Scripts\python.exe -m ruff check .                   # all checks passed
 .venv\Scripts\python.exe -m mypy threatlens app.py         # no issues (64 files)
 .venv\Scripts\python.exe -m bandit -r threatlens scripts app.py -q   # 0 open issues

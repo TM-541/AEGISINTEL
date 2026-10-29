@@ -162,23 +162,30 @@ CSS = f"""
   div[data-testid="stTextInputRootElement"], div[data-testid="stTextAreaRootElement"],
   div[data-testid="stNumberInputContainer"], div[data-testid="stDateInputField"],
   div[data-testid="stDateTimeInputField"],
+  div[data-testid="stSelectbox"] div[role="group"],
+  div[data-testid="stMultiSelect"] div[role="group"],
   div[data-baseweb="input"], div[data-baseweb="textarea"], div[data-baseweb="select"] > div {{
       background-color: {PALETTE["field"]} !important;
       border: 1px solid {PALETTE["field_border"]} !important;
       border-radius: 8px !important;
       transition: border-color .15s ease, box-shadow .15s ease; }}
   div[data-testid="stTextInputRootElement"]:hover, div[data-testid="stTextAreaRootElement"]:hover,
-  div[data-testid="stNumberInputContainer"]:hover, div[data-baseweb="input"]:hover,
+  div[data-testid="stNumberInputContainer"]:hover,
+  div[data-testid="stSelectbox"] div[role="group"]:hover,
+  div[data-testid="stMultiSelect"] div[role="group"]:hover, div[data-baseweb="input"]:hover,
   div[data-baseweb="textarea"]:hover, div[data-baseweb="select"] > div:hover {{
       border-color: {PALETTE["field_border_hover"]} !important; }}
   div[data-testid="stTextInputRootElement"]:focus-within,
   div[data-testid="stTextAreaRootElement"]:focus-within,
   div[data-testid="stNumberInputContainer"]:focus-within,
+  div[data-testid="stSelectbox"] div[role="group"]:focus-within,
+  div[data-testid="stMultiSelect"] div[role="group"]:focus-within,
   div[data-baseweb="input"]:focus-within, div[data-baseweb="textarea"]:focus-within,
   div[data-baseweb="select"] > div:focus-within {{
       border-color: {PALETTE["accent"]} !important;
       box-shadow: 0 0 0 3px rgba(56,214,196,.18) !important; }}
-  div[data-testid="stTextInputRootElement"] input, div[data-testid="stTextAreaRootElement"] textarea,
+  div[data-testid="stTextInputRootElement"] input,
+  div[data-testid="stTextAreaRootElement"] textarea,
   div[data-testid="stNumberInputContainer"] input,
   div[data-baseweb="input"] > div, div[data-baseweb="base-input"],
   div[data-baseweb="input"] input, div[data-baseweb="textarea"] textarea {{

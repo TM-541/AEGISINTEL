@@ -1,6 +1,6 @@
 [project]
 name = "threatlens"
-version = "1.0.0"
+version = "1.0.1"
 description = "AEGISINTEL - Evidence-first threat intelligence. Every verdict, provable. A local-first SOC investigation platform."
 readme = "README.md"
 requires-python = ">=3.11,<3.13"

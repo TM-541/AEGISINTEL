@@ -169,5 +169,21 @@ invisible until clicked. Fields now sit in a darker well (`#0A1120`) with an out
 (`#5A6C8A`) that has at least 3:1 contrast against both the panel and the field fill
 (WCAG 1.4.11). The outline brightens on hover and shows an accent ring on focus.
 `test_form_fields_are_visible_before_focus` checks these contrast ratios. Full suite:
-**289 passed, 2 deselected**. The rendered look was not checked in a real browser (no
-browser automation is installed).
+**289 passed, 2 deselected**.
+
+**Browser verification (v1.0.1):** the contrast test checked only the colour values. A real
+headless-Chrome check found that the v1.0.0 CSS **did not apply**: Streamlit 1.66 renders inputs
+with `stTextInputRootElement` / React Aria markup, not the BaseWeb selectors the CSS targeted.
+The selectors were fixed for text inputs, text areas, number fields, dates, select boxes and
+multi-selects. Computed styles were then confirmed in the browser: field background
+`rgb(10,17,32)`, border `1px solid rgb(90,108,138)`. The README screenshots were taken after
+this fix.
+`test_field_selectors_exist_in_installed_streamlit_frontend` now fails if a Streamlit
+upgrade renames any field the theme styles. Full suite: **290 passed, 2 deselected**.
+
+### README screenshots (2026-10-30)
+`docs/screenshots/*.png` were captured with headless Chrome (DevTools protocol) from a
+throwaway instance with its own data directory, seeded only from `sample_data/`. The
+owner's database was never used. The AI report screenshot shows a real `llama3.2:3b` run:
+validated on attempt 1, 426 s on CPU. The demo instance and its data were deleted
+afterwards.

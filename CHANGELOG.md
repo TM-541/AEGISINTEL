@@ -4,6 +4,13 @@ All notable changes to AEGISINTEL are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and the project uses
 [Semantic Versioning](https://semver.org/).
 
+## [1.0.1] - 2026-10-30
+### Fixed
+- Form fields (text inputs, text areas, number fields, dates, select boxes, multi-selects) now show an outline before they are clicked. The 1.0.0 styling targeted selectors that Streamlit 1.66 no longer renders. The fix was verified in a real browser.
+
+### Added
+- README screenshots captured from a running instance with synthetic sample data.
+
 ## [1.0.0] - 2026-10-30
 First public release.
 
