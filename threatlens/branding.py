@@ -14,3 +14,5 @@ TAGLINE = "Evidence-first threat intelligence. Every verdict, provable."
 ASSETS = Path(__file__).resolve().parent.parent / "assets"
 LOGO_PATH = ASSETS / "aegisintel_logo.png"
 ICON_PATH = ASSETS / "aegisintel_icon.png"
+# Shield + name, shown at the top of the sidebar (st.logo accepts only an image there).
+WORDMARK_PATH = ASSETS / "aegisintel_wordmark.png"

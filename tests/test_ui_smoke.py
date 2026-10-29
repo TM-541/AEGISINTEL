@@ -158,6 +158,18 @@ def test_background_is_static_valid_svg_and_text_stays_readable():
         assert contrast >= 4.5, (color, contrast)  # WCAG AA even at the brightest pixel
 
 
+def test_sidebar_wordmark_fits_streamlit_logo_slot():
+    from PIL import Image
+
+    from threatlens.branding import WORDMARK_PATH
+
+    with Image.open(WORDMARK_PATH) as img:
+        assert img.mode == "RGBA" and img.getpixel((img.width - 1, 0))[3] == 0  # transparent
+        # st.logo(size="large") draws 32 px high with a 240 px max width; wider would be cut.
+        assert img.width / img.height <= 240 / 32
+        assert img.height >= 64  # at least 2x for sharp rendering on high-DPI screens
+
+
 def test_form_fields_are_visible_before_focus():
     from threatlens.ui.theme import CSS, PALETTE
 

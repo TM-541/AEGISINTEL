@@ -8,7 +8,7 @@ from __future__ import annotations
 
 import streamlit as st
 
-from threatlens.branding import ICON_PATH, LOGO_PATH, PRODUCT_NAME, TAGLINE
+from threatlens.branding import ICON_PATH, PRODUCT_NAME, TAGLINE, WORDMARK_PATH
 from threatlens.security.rbac import Permission, has_permission
 from threatlens.services.container import Services, build_services
 from threatlens.ui import nav as registry
@@ -31,12 +31,15 @@ def get_services() -> Services:
 
 
 def brand() -> None:
-    if LOGO_PATH.is_file():
-        st.logo(str(LOGO_PATH), size="large", icon_image=str(ICON_PATH))
-    st.sidebar.markdown(
-        f'<div class="tl-brand">{PRODUCT_NAME}</div><div class="tl-tagline">{TAGLINE}</div>',
-        unsafe_allow_html=True,
-    )
+    if WORDMARK_PATH.is_file():
+        # Full shield + name when the sidebar is open; the shield alone when it is collapsed.
+        st.logo(str(WORDMARK_PATH), size="large", icon_image=str(ICON_PATH))
+        st.sidebar.markdown(f'<div class="tl-tagline">{TAGLINE}</div>', unsafe_allow_html=True)
+    else:
+        st.sidebar.markdown(
+            f'<div class="tl-brand">{PRODUCT_NAME}</div><div class="tl-tagline">{TAGLINE}</div>',
+            unsafe_allow_html=True,
+        )
 
 
 def main() -> None:
