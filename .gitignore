@@ -1,0 +1,60 @@
+# Secrets / config
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+secrets/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+build/
+dist/
+
+# Tooling caches
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# Runtime data (databases, vector store, logs)
+data/*
+!data/.gitkeep
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+*.sqlite3
+chroma/
+logs/
+*.log
+
+# Private datasets (only synthetic sample_data is committed)
+private_data/
+sample_data/private/
+
+# Full ATT&CK STIX bundle (downloaded on demand)
+threatlens/integrations/data/enterprise-attack*.json
+
+# OS / IDE
+.DS_Store
+Thumbs.db
+.idea/
+threatlens/integrations/data/attack_catalog.json
+
+# Local-only working files (AI-assistant config, private build notes)
+CLAUDE.md
+.claude/
+IMPLEMENTATION_LOG.md
+PROJECT_PLAN.md
+
+# Editors / coverage reports
+.vscode/
+coverage.xml
+*.bak
+*.tmp

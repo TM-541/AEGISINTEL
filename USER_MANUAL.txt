@@ -1,0 +1,674 @@
+===============================================================================
+                              AEGISINTEL
+         Evidence-first threat intelligence. Every verdict, provable.
+
+                               USER MANUAL
+===============================================================================
+
+Version: matches the application in this folder (database schema version 2).
+Every command, menu, button and setting in this manual was checked against the
+actual application code and tested on Windows 11 with Python 3.11.9.
+
+Contents
+  A. About AEGISINTEL
+  B. Requirements
+  C. Starting the application
+  D. First-time administrator setup and signing in
+  E. Importing security events
+  F. Running detection and correlation
+  G. Investigating an incident
+  H. Generating an AI investigation report
+  I. Similarity index and similar incidents
+  J. Response proposals and approvals
+  K. Users and roles
+  L. Audit log, data storage and privacy
+  M. Troubleshooting
+  N. Backups, restoring and starting fresh
+  O. Security and operational limitations
+  P. Quick-start checklist
+
+
+-------------------------------------------------------------------------------
+A. ABOUT AEGISINTEL
+-------------------------------------------------------------------------------
+
+What it does
+  AEGISINTEL helps a security analyst investigate security events on their own
+  computer. You import log files. The application:
+    1. checks every file and record before storing it,
+    2. looks for known attack patterns using detection rules,
+    3. looks for unusual behaviour compared with each user's or computer's own
+       history (this can find activity that no rule describes),
+    4. groups related evidence into incidents,
+    5. maps behaviour to MITRE ATT&CK techniques (a public catalogue of attacker
+       techniques),
+    6. can ask a local AI model to draft an investigation report, and checks
+       every claim in that report against the real stored evidence,
+    7. lets analysts record their verdict and approve SIMULATED response
+       actions.
+
+Who should use it
+  Security analysts, incident responders, security engineers and students
+  learning security operations. It is designed for demonstrations, training and
+  lab work using synthetic (made-up) or authorised data.
+
+What it cannot guarantee
+  - It cannot prove that a computer or network is safe.
+  - It cannot detect every attack. New or unknown attacks may not be detected.
+  - It does not scan files for malware. A file that passes import checks is
+    only well-formed, not safe.
+  - The AI can be wrong. Its reports are suggestions for a human to check.
+  - Response actions are simulated. Nothing is changed on real systems.
+
+Four words used throughout this manual
+  Detection   A detection rule matched. This means the evidence matches a known
+              pattern. It is NOT proof of an attack.
+  Anomaly     Behaviour that is unusual compared with the history available
+              (for example, a first-ever login from a new network). Unusual is
+              NOT the same as malicious.
+  Hypothesis  A possible explanation, usually written by the AI. It must be
+              checked against the evidence.
+  Confirmed incident
+              An incident where an analyst has recorded the verdict
+              "true positive" after reviewing the evidence.
+
+Why "no detection" does not mean "safe"
+  Rules only describe attacks someone has already written a rule for.
+  Behavioural checks only work when enough history exists. Logs may be
+  missing, incomplete or deleted by an attacker. When nothing is detected, the
+  correct conclusion is "nothing was detected in the data available", never
+  "the environment is safe". The application shows "coverage gaps" where it
+  did not have enough history to judge.
+
+How an incident is described
+  Every incident shows four separate labels:
+    Severity    How bad it would be if the activity is malicious (impact).
+    Confidence  How strongly the evidence supports the incident (low, medium,
+                high). It is high when independent kinds of evidence agree,
+                for example a rule match AND a behavioural anomaly.
+    Detection   How it was found: "Known detection" (a rule matched),
+                "Anomalous behaviour" (only a behavioural check fired), or
+                "Suspicious - no rule match" (an analyst flagged it).
+    Verdict     The analyst's conclusion. Only a person can set it. It starts
+                as "undetermined".
+
+
+-------------------------------------------------------------------------------
+B. REQUIREMENTS
+-------------------------------------------------------------------------------
+
+  - Windows 10 or 11. Visual Studio Code (VS Code) is recommended but any
+    PowerShell terminal works.
+  - Git (to download the project) and Python 3.11 (python.org; during setup
+    tick "Add python.exe to PATH"). Check with:  py -3.11 --version
+  - The project folder (called "the project folder" in this manual), for
+    example C:\AEGISINTEL. It is created by the installation steps below.
+  - The project's virtual environment folder ".venv" (a private copy of
+    Python with this project's packages). It is created once, during
+    installation (section C, step 0), and reused afterwards.
+  - Ollama (a program that runs AI models locally) - only needed for AI
+    reports and the similarity index. Everything else works without it.
+      Default analysis model : llama3.2:3b
+      Default embedding model: nomic-embed-text
+      Ollama address         : http://127.0.0.1:11434 (this computer only)
+  - A web browser (Chrome, Edge or Firefox).
+
+  Data folders (created automatically):
+      data\threatlens.db   the database (users, events, incidents, audit log)
+      data\backups\        database backups
+      data\chroma\         the similarity index (can always be rebuilt)
+
+  Note: some internal names (the database file name and settings that start
+  with THREATLENS_) keep the project's original internal name so that existing
+  installations keep working. This is expected.
+
+
+-------------------------------------------------------------------------------
+C. STARTING THE APPLICATION
+-------------------------------------------------------------------------------
+
+  1. Open VS Code, then open a terminal: menu Terminal -> New Terminal.
+     Make sure it is a PowerShell terminal.
+
+  0. FIRST TIME ONLY - install (needs internet access once):
+
+       git clone https://github.com/TM-541/AEGISINTEL.git C:\AEGISINTEL
+       cd C:\AEGISINTEL
+       py -3.11 -m venv .venv
+       .venv\Scripts\python.exe -m pip install --upgrade pip
+       .venv\Scripts\python.exe -m pip install -r requirements.lock
+       .venv\Scripts\python.exe -m pip install -e . --no-deps
+
+     requirements.lock pins the exact, tested package versions. Optional AI
+     features: install Ollama from ollama.com, then run
+       ollama pull llama3.2:3b
+       ollama pull nomic-embed-text
+     Optional settings: copy .env.example to .env and edit it. The defaults
+     work without a .env file. Never share or commit your .env file.
+
+  2. Go to the project folder (adjust the path if you installed elsewhere):
+
+       cd C:\AEGISINTEL
+
+  3. FIRST TIME ONLY - prepare the database and get a setup code:
+
+       .venv\Scripts\python.exe scripts\init_db.py
+
+     You only need this when no administrator exists yet. It prints:
+       - "Database ready at: data\threatlens.db"
+       - a ONE-TIME SETUP CODE, valid for 30 minutes.
+     If an administrator already exists it prints "An administrator already
+     exists. Initial setup is closed." - that is normal; skip to step 4.
+     Running it again is safe. It never deletes data. (If the application has
+     been updated, it also upgrades the database after making an automatic
+     backup in data\backups\.)
+
+  4. Start the application:
+
+       .venv\Scripts\python.exe -m streamlit run app.py
+
+     Wait for the line "URL: http://127.0.0.1:8501".
+
+  5. Open your browser at:
+
+       http://127.0.0.1:8501
+
+     The application only accepts connections from this computer.
+
+  6. To stop the application, click in the terminal and press Ctrl+C.
+
+  If port 8501 is already in use (another copy is running), either stop the
+  other copy with Ctrl+C in its terminal, or start on another port:
+
+       .venv\Scripts\python.exe -m streamlit run app.py --server.port 8502
+
+  and open http://127.0.0.1:8502 instead.
+
+  Do NOT run init_db.py before every launch. It is only needed the first time.
+
+
+-------------------------------------------------------------------------------
+D. FIRST-TIME ADMINISTRATOR SETUP AND SIGNING IN
+-------------------------------------------------------------------------------
+
+  There are no default usernames or passwords. The first administrator is
+  created with the one-time setup code from section C, step 3. Only someone who
+  can use this computer's terminal can get that code.
+
+  1. Open the application. You will see "Initial administrator setup".
+  2. Paste the setup code into "One-time setup code".
+  3. Choose a username: 3 to 64 characters, using letters, numbers, dot (.),
+     underscore (_) or hyphen (-).
+  4. Choose a password and type it twice. Rules:
+       - 12 to 128 characters,
+       - must not contain your username,
+       - must not be very common or very repetitive.
+     A long passphrase of several unrelated words works well.
+  5. Click "Create administrator", then sign in on the "Sign in" screen.
+
+  Setup code rules: it expires after 30 minutes, works only once, and stops
+  working permanently once an administrator exists. If it expired, run
+  init_db.py again for a new code.
+
+  Signing in - good to know:
+  - After 5 wrong passwords within 15 minutes, that username is locked for
+    15 minutes (even the correct password is refused). Wait and try again.
+  - The error message is the same for a wrong username and a wrong password.
+    This is deliberate (it stops attackers learning which usernames exist).
+  - You are signed out after 30 minutes without activity, or after 8 hours.
+  - Refreshing the browser page signs you out. This is deliberate: sessions
+    are kept on the server only.
+  - Change your password in My Account (left menu, Administration section).
+
+
+-------------------------------------------------------------------------------
+E. IMPORTING SECURITY EVENTS
+-------------------------------------------------------------------------------
+
+  Who can do this: Analyst and Administrator roles.
+
+  Supported files: .json, .jsonl, .ndjson and .csv, UTF-8 text, at most
+  10 MB and 50,000 records per file. Processing stops after 60 seconds.
+  Other file types (for example .zip, .exe, .pdf, .docx) are refused.
+
+  Sample files included (synthetic data, safe for demonstrations):
+      sample_data\auth_events.jsonl     -> source type: Authentication logs
+      sample_data\endpoint_events.json  -> source type: Endpoint events
+      sample_data\alerts.csv            -> source type: Security alerts
+
+  Steps:
+  1. In the left menu click "Alerts & Events".
+  2. Open the section "Import security events".
+  3. Choose the "Source type" that matches the file (see the list above).
+  4. In the "File" box, click the upload button (or drag the file onto the
+     box) and select the file.
+  5. Review the preview. It shows:
+       Records     rows found in the file
+       Valid       rows that passed all checks
+       New         valid rows not already stored
+       Duplicates  rows already in the file or already stored (not imported
+                   twice)
+       Rejected    rows that failed checks; the reason for each is listed
+     The first 20 normalised events are shown.
+  6. Tick "I have reviewed the preview and want to import ...".
+  7. Click "Confirm import". A message shows how many events were imported.
+
+  Notes:
+  - Nothing is stored until you click "Confirm import".
+  - Importing exactly the same file again is refused ("This exact file has
+    already been imported.").
+  - Every stored event keeps the original record and notes about how it was
+    interpreted (for example "timestamp had no time zone; interpreted as UTC").
+    See "Inspect original evidence and provenance" below the events table.
+  - Treat every file as untrusted. Passing these checks does not mean a file is
+    free of malware. Only import data you are authorised to use.
+
+  Browsing events: use the search box and filters (User, Host, Event type,
+  Severity) and the "Page" box. "Export this page (CSV)" downloads the current
+  page.
+
+
+-------------------------------------------------------------------------------
+F. RUNNING DETECTION AND CORRELATION
+-------------------------------------------------------------------------------
+
+  Who can do this: Analyst and Administrator roles.
+
+  1. Go to "Alerts & Events".
+  2. Click "Run detection & correlation".
+
+  Three independent layers run (the AI is NOT used and NOT needed):
+    1. Detection rules (Sigma-format rules) - known attack patterns on a
+       single event.
+    2. Correlation rules - patterns across several events, for example many
+       failed logins followed by a successful one, or one address trying many
+       accounts (password spraying).
+    3. Behavioural analytics - unusual activity compared with history:
+         BH-001  login from a network the user never used before
+         BH-002  a program that rarely or never runs on that computer
+         BH-003  login outside the hours the user normally works (UTC)
+       Each needs enough history. When history is missing, a "coverage gap" is
+       recorded instead of guessing (see Detections & ATT&CK ->
+       Behavioural analytics).
+
+  The result message lists new findings, behavioural indicators, incidents and
+  links between incidents. Running it again does not create duplicates.
+
+  With the three sample files imported into an empty database, detection
+  creates 5 incidents (tested):
+    - Suspicious activity on ws-fin-07 ............ critical, high confidence
+    - Brute force followed by successful logon (j.doe) .. high, high confidence
+    - Password spraying from a single source (203.0.113.45) .. medium
+    - Anomalous behaviour on ws-hr-02 ......... low, "Anomalous behaviour"
+    - Anomalous behaviour for user c.nguyen ... low, "Anomalous behaviour"
+  The last two were found ONLY by behavioural analytics - no rule matched.
+  With other data, the number of incidents will differ.
+
+
+-------------------------------------------------------------------------------
+G. INVESTIGATING AN INCIDENT
+-------------------------------------------------------------------------------
+
+  1. Click "Incident Queue". Filter by Status, Severity, Detection and Verdict.
+     Click a row to open it.
+  2. The "Investigation Workspace" opens. At the top you see the four labels
+     (Severity, Confidence, Detection, Verdict) and the workflow Status.
+     "Confidence basis" explains why the confidence was given.
+
+  Tabs in the workspace:
+    Rule findings          which rule matched, the exact field values that
+                           matched, the rule version, and the event IDs.
+    Behavioural indicators the anomaly, its score (0 to 1 = how unusual, NOT
+                           the chance of an attack) and the baseline used.
+    ATT&CK mappings        candidate techniques. Analysts can Confirm, Reject
+                           or Reset each mapping ("Review mapping").
+    Related incidents      other incidents that share a user, computer or
+                           address close in time. A lead, not proof that the
+                           same attacker is involved. "Open" jumps to it.
+    Similar incidents      see section I.
+    Notes                  analyst notes (saved with your name and time).
+    Propose response       see section J.
+
+  Updating the incident (Analyst and Administrator):
+    - Workflow box: choose "Move to status", write a reason, click "Update
+      status". "Assign" assigns an analyst.
+    - "Record analyst verdict (disposition)": choose a verdict and write a
+      justification, then "Save verdict". Verdicts:
+        true positive, benign confirmed, false positive, inconclusive,
+        insufficient telemetry, undetermined.
+      The verdict does not change severity or confidence.
+
+  Evidence & Timeline (left menu) shows every event of the selected incident
+  on a timeline, marked "rule evidence" or "context", plus the original
+  records exactly as imported.
+
+  Facts versus interpretation:
+    Facts       the stored events, rule matches and behavioural indicators.
+    Interpretation  AI reports and hypotheses. Always check them against the
+                event IDs they cite.
+
+  Flagging activity that nothing detected:
+    In "Alerts & Events", open "Flag suspicious events for investigation (no
+    rule matched)", pick events from the current page, give a title, explain
+    why, choose a severity and click "Create incident". The incident is
+    labelled "Suspicious - no rule match" with low confidence.
+
+
+-------------------------------------------------------------------------------
+H. GENERATING AN AI INVESTIGATION REPORT
+-------------------------------------------------------------------------------
+
+  Who can do this: Analyst and Administrator (viewers can read reports).
+  Limit: 30 reports per user per hour.
+
+  Before you start:
+    - Ollama must be running and the model must be installed. In PowerShell:
+          ollama list
+      You should see llama3.2:3b. If not:
+          ollama pull llama3.2:3b
+    - Health & Configuration shows whether Ollama and the model are available.
+
+  Steps:
+  1. Select an incident (Incident Queue), then click "AI Investigation Report".
+  2. Click "Generate investigation report" and wait. On the test computer
+     (no graphics card) this took about 4 to 5 minutes with llama3.2:3b. Your
+     time will differ. The larger qwen3:8b model needs a graphics card for
+     reasonable speed.
+  3. The report shows: summary, timeline, observations (facts), hypotheses
+     (interpretation), alternative explanations, missing evidence, next steps,
+     suggested ATT&CK techniques and suggested response actions.
+
+  What the application checks automatically:
+    - The answer must match a strict format. Otherwise it retries (at most 3
+      attempts in total).
+    - Every event ID the AI cites must exist in this incident. Invented IDs
+      are rejected.
+    - Technique IDs must exist in the MITRE ATT&CK dataset. Invalid ones are
+      removed and noted.
+    - Timeline times are taken from the real events, not from the AI.
+    - A separate scanner warns (red box) if the evidence contains text that
+      tries to give the AI instructions ("prompt injection").
+    - The AI cannot change the incident, approve anything or run commands.
+
+  If the AI is unavailable, slow or gives invalid output, a "Deterministic
+  summary" is shown instead with a yellow warning. Your incidents, events and
+  detections are always still available.
+
+  Always review AI output. It can be wrong or misleading even when it cites
+  real events. It is never an authoritative verdict.
+
+  "Confirm mapping" (under suggested techniques) records an AI-suggested
+  technique as analyst-confirmed. "Create proposal" sends a suggested response
+  for human approval (section J).
+
+
+-------------------------------------------------------------------------------
+I. SIMILARITY INDEX AND SIMILAR INCIDENTS
+-------------------------------------------------------------------------------
+
+  Purpose: find past incidents that behaved similarly (same techniques,
+  similar tools). Results are leads to investigate, NOT proof of a common
+  attack.
+
+  Requires Ollama with the embedding model:
+      ollama pull nomic-embed-text
+
+  1. Go to "Detections & ATT&CK" -> tab "Similarity index".
+  2. Click "Rebuild similarity index" (Analyst or Administrator). Rebuild after
+     new incidents are created or after data is deleted.
+  3. Open an incident -> tab "Similar incidents" -> "Find similar past
+     incidents".
+
+  No usernames, IP addresses or computer names are stored in the index.
+  Viewers cannot use this feature.
+
+
+-------------------------------------------------------------------------------
+J. RESPONSE PROPOSALS AND APPROVALS
+-------------------------------------------------------------------------------
+
+  ALL ACTIONS ARE SIMULATED. Nothing is changed on any real account, computer
+  or network. Results are labelled "SIMULATED".
+
+  Available actions: escalate incident, prepare investigation checklist,
+  generate containment plan, simulate account disable, simulate host
+  isolation, simulate password reset.
+
+  1. Propose: open an incident -> tab "Propose response" -> choose the action,
+     target and rationale -> "Submit proposal". (Or "Create proposal" from an
+     AI report.)
+  2. Decide: open "Response Approvals". Under "pending", write a reason, tick
+     "I confirm this decision" and click "Approve" or "Reject".
+  3. Execute: under "approved", tick "Run this SIMULATED action now" and click
+     "Execute (simulated)".
+
+  Two-person rule (on by default): the person who proposed an action cannot
+  approve it. A different Analyst or Administrator must approve it. (The
+  proposer may still reject their own proposal.)
+  To try this alone: as an Administrator, create a second user with the role
+  "analyst" (section K). Propose as one user, sign out, sign in as the other
+  and approve.
+
+  Optional local demonstration setting (weakens security - not for shared use):
+  create a file named .env in the project folder containing
+
+       THREATLENS_RESPONSE_REQUIRE_TWO_PERSON=false
+
+  and restart the application. Keep the default (true) for any shared or
+  serious use. Note: .env is a plain configuration file, not encryption.
+
+  Each proposal can only be decided once and executed once. Every step is in
+  the audit log with who, when and why.
+
+
+-------------------------------------------------------------------------------
+K. USERS AND ROLES
+-------------------------------------------------------------------------------
+
+  Roles:
+    Viewer         Read-only: overview, events, incidents, reports, detection
+                   rules, health. Cannot import, change incidents or approve.
+    Analyst        Everything a viewer can do, plus: import events, run
+                   detection, update incidents and verdicts, flag events,
+                   generate AI reports, similarity search, propose, approve and
+                   execute simulated responses.
+    Administrator  Everything an analyst can do, plus: user management, audit
+                   log, deleting imported data.
+
+  Permissions are enforced by the server, not only by hiding menu items.
+
+  User Management (Administrators):
+    - "Create user": username, display name, role, initial password.
+    - "Modify user": choose a user and an action: Change role, Disable,
+      Enable or Reset password, then "Apply".
+  Safeguards: you cannot change your own role or disable yourself, and the
+  last active administrator cannot be removed. Role changes and password
+  resets sign the user out everywhere.
+
+
+-------------------------------------------------------------------------------
+L. AUDIT LOG, DATA STORAGE AND PRIVACY
+-------------------------------------------------------------------------------
+
+  Audit Log (Administrators only, left menu): records sign-ins (successful and
+  failed), refused actions, user changes, imports, detection runs, incident
+  changes, verdicts, AI reports, approvals and deletions - with who and when.
+  Passwords, setup codes and session tokens are never recorded.
+
+  The audit log cannot be edited through the application. Each record is
+  linked to the previous one with a cryptographic hash; the page shows
+  "Hash chain verified" or warns if records were changed outside the
+  application. This DETECTS changes; it cannot PREVENT someone with access to
+  the database file from rewriting it.
+
+  Where data is stored (on this computer only):
+      data\threatlens.db   users, events, incidents, reports, audit log
+      data\backups\        backups you or the upgrade process made
+      data\chroma\         similarity index
+  Technical log messages are printed in the terminal window; no log file is
+  written.
+
+  Deleting imported data (Administrators): "Alerts & Events" -> "Data
+  retention: delete an import (administrators)". It shows exactly what will be
+  removed (the events and every incident built on them). Type the file name and
+  click "Delete permanently". This cannot be undone - make a backup first
+  (section N). The audit log records that a deletion happened (counts only).
+
+  Protect the data folder: anyone who can read data\threatlens.db can read the
+  stored events. Use Windows disk encryption (BitLocker) on real systems.
+
+
+-------------------------------------------------------------------------------
+M. TROUBLESHOOTING
+-------------------------------------------------------------------------------
+
+  ".venv\Scripts\python.exe is not recognized / not found"
+    - Check you are in the project folder (command: pwd). It contains app.py.
+    - Only if the .venv folder is really missing, create it (section C, step 0):
+          py -3.11 -m venv .venv
+          .venv\Scripts\python.exe -m pip install -r requirements.lock
+          .venv\Scripts\python.exe -m pip install -e . --no-deps
+
+  init_db.py fails
+    - Read the error. "database is unavailable" usually means another program
+      has the file locked or the folder is read-only. Close other copies of the
+      app. If the database is damaged, restore a backup (section N).
+
+  The browser cannot connect
+    - Is the terminal still running the app? Look for the "URL:" line.
+    - Use http://127.0.0.1:8501 exactly (not https).
+    - Port in use: see section C.
+
+  "The setup code is invalid or expired"
+    - Codes last 30 minutes and work once. Run init_db.py again for a new one.
+
+  Cannot sign in
+    - Wait 15 minutes after 5 wrong attempts.
+    - A disabled account cannot sign in. Ask an administrator.
+    - If the only administrator forgot the password, on this computer run:
+          .venv\Scripts\python.exe scripts\recover_admin.py USERNAME
+      and type a new password at the hidden prompt. This re-enables the
+      account and signs it out everywhere. It is recorded in the audit log.
+
+  "The local AI model is unavailable" / model missing
+    - Start Ollama (open the Ollama app, or run: ollama serve).
+    - Check: ollama list. Install: ollama pull llama3.2:3b
+    - Check Health & Configuration.
+
+  AI report is slow or times out
+    - Normal on computers without a graphics card (several minutes).
+    - Timeout is 600 seconds. A "Deterministic summary" is shown on timeout.
+
+  "AI investigation limit reached"
+    - Each user can generate 30 reports per hour. Wait and retry.
+
+  A file is rejected
+    - Read the message: wrong file type, over 10 MB, not UTF-8, invalid JSON,
+      duplicate CSV column names, or too many records. Fix and retry.
+    - Individual bad rows are listed under the preview with the reason.
+
+  Import produced no incidents
+    - That does not mean the data is safe. Check: did detection run? Is the
+      data relevant (logins, process starts, alerts)? Look at Detections &
+      ATT&CK -> Behavioural analytics -> coverage gaps.
+
+  Rebuilding the similarity index fails
+    - Install the embedding model: ollama pull nomic-embed-text
+    - Make sure Ollama is running.
+
+  "A different analyst must approve this proposal"
+    - The two-person rule is working. Sign in as another analyst (section J).
+
+  "This proposal has already been decided"
+    - Someone already approved or rejected it. Refresh the page.
+
+  "You do not have permission to perform this action"
+    - Your role does not allow it (section K). Ask an administrator.
+
+  Database or permission errors
+    - Close all copies of the app; check you can write to the data folder.
+    - Check Health & Configuration -> Database. Restore a backup if needed.
+
+  Never share passwords, setup codes or private logs when asking for help.
+
+
+-------------------------------------------------------------------------------
+N. BACKUPS, RESTORING AND STARTING FRESH
+-------------------------------------------------------------------------------
+
+  Restarting the app (Ctrl+C, then start again) never deletes data.
+
+  Make a backup (safe while the app is running):
+      .venv\Scripts\python.exe scripts\backup_db.py
+  It writes data\backups\threatlens-<date>-manual.db and a .sha256
+  fingerprint file, and checks the backup is readable. List backups:
+      .venv\Scripts\python.exe scripts\backup_db.py --list
+
+  Restore a backup:
+    1. Stop the app (Ctrl+C).
+    2. Run (replace the file name with yours):
+          .venv\Scripts\python.exe scripts\restore_db.py data\backups\FILE.db
+    3. Type RESTORE when asked. The current database is first saved as a
+       "pre-restore" backup, so a restore can be undone.
+    4. Start the app again.
+
+  Start with a completely fresh database (for example for a clean demo):
+    WARNING: this removes all users, imported events, incidents, reports,
+    approvals and the audit history from the active database.
+    1. Make a backup (see above) and confirm it was created.
+    2. Stop the app (Ctrl+C).
+    3. In File Explorer, move data\threatlens.db (and, if present,
+       data\threatlens.db-wal and data\threatlens.db-shm) to another folder
+       instead of deleting them.
+    4. Run init_db.py (section C, step 3) and create a new administrator.
+  To go back, restore the backup with restore_db.py.
+
+  The similarity index (data\chroma) can be rebuilt any time from the
+  "Rebuild similarity index" button.
+
+
+-------------------------------------------------------------------------------
+O. SECURITY AND OPERATIONAL LIMITATIONS
+-------------------------------------------------------------------------------
+
+  - Only import data you are authorised to use. Use synthetic data for demos.
+  - Keep the application bound to this computer (127.0.0.1). Do not expose it
+    to a network unless it is placed behind a properly secured web server with
+    HTTPS; the application itself cannot add those protections.
+  - Protect your password, the .env file and the data folder.
+  - No alert does not mean no attack. Unknown attacks may not be detected.
+  - Logs may not contain enough evidence to establish what happened.
+  - Behavioural baselines are learned from imported data, which could already
+    contain attacker activity.
+  - AI reports can be incorrect, even when they cite real events.
+  - Response actions in this version are simulated only.
+  - A program on your own computer is not automatically safe from other users
+    of that computer or from compromised software.
+  - The database is designed for one analyst workstation, not for many
+    simultaneous users.
+
+
+-------------------------------------------------------------------------------
+P. QUICK-START CHECKLIST
+-------------------------------------------------------------------------------
+
+  [ ] 1. Open a PowerShell terminal in the project folder (e.g. C:\AEGISINTEL)
+  [ ] 2. First time only: install as in section C, step 0
+  [ ] 3. First time only: .venv\Scripts\python.exe scripts\init_db.py
+  [ ] 4. Start: .venv\Scripts\python.exe -m streamlit run app.py
+  [ ] 5. Open http://127.0.0.1:8501 ; first time: create the administrator
+         with the setup code, then sign in
+  [ ] 6. Alerts & Events -> Import the three files in sample_data\ with the
+         matching source types
+  [ ] 7. Click "Run detection & correlation"
+  [ ] 8. Incident Queue -> open "Suspicious activity on ws-fin-07" -> review
+         tabs, Evidence & Timeline and the four labels
+  [ ] 9. AI Investigation Report -> "Generate investigation report" -> check
+         every claim against the cited event IDs
+  [ ] 10. Propose a simulated response; approve it as a DIFFERENT analyst in
+          Response Approvals; check the Audit Log
+  [ ] 11. Stop the application with Ctrl+C in the terminal
+
+===============================================================================
+End of manual.
+===============================================================================

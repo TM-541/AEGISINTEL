@@ -1,0 +1,6 @@
+# Byte-identical checkouts on every OS. Migrations, Sigma rules and sample data are
+# fingerprinted (checksums / rule versions / content-hash dedup), so line endings must
+# never be rewritten on checkout.
+* text=auto eol=lf
+*.png binary
+*.ico binary

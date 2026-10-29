@@ -1,0 +1,36 @@
+name: Bug report
+description: Something does not work as documented
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Do not report security vulnerabilities here.** Follow SECURITY.md instead.
+        Never paste real logs, credentials, setup codes or customer data. Use synthetic data.
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened, and what did you expect?
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: "1. Import sample_data/auth_events.jsonl  2. Click ...  3. ..."
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: AEGISINTEL version / commit
+  - type: input
+    id: env
+    attributes:
+      label: OS and Python version
+      placeholder: "Windows 11, Python 3.11.9"
+  - type: textarea
+    id: logs
+    attributes:
+      label: Error message (redacted)
+      render: text

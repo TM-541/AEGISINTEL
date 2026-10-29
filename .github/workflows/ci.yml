@@ -1,0 +1,41 @@
+name: CI
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main, develop]
+
+permissions:
+  contents: read
+
+jobs:
+  quality:
+    name: Lint, types, security, tests (${{ matrix.os }})
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [windows-latest, ubuntu-latest]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+          cache-dependency-path: requirements.lock
+      - name: Install pinned dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -r requirements.lock
+          python -m pip install -e . --no-deps
+      - name: Ruff (lint + format)
+        run: |
+          python -m ruff check .
+          python -m ruff format --check threatlens app.py scripts tests
+      - name: Mypy
+        run: python -m mypy threatlens app.py
+      - name: Bandit
+        run: python -m bandit -r threatlens scripts app.py -q
+      - name: Tests (live Ollama tests are opt-in and skipped)
+        run: python -m pytest -p no:cacheprovider

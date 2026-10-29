@@ -1,0 +1,228 @@
+{
+ "description": "Curated subset of MITRE ATT&CK Enterprise techniques used by THREATLENS rules. Generated from the official MITRE CTI STIX bundle by scripts/fetch_attack.py.",
+ "license": "MITRE ATT&CK(R) - see https://attack.mitre.org/resources/legal-and-branding/terms-of-use/",
+ "retrieved_at": "2026-10-29T15:51:06+00:00",
+ "revoked": {
+  "T1070.001": "T1685.005",
+  "T1562.001": "T1685",
+  "T1562.002": "T1685.001"
+ },
+ "source": "https://raw.githubusercontent.com/mitre/cti/master/enterprise-attack/enterprise-attack.json",
+ "source_sha256": "66f3fe3f07ef1a2de0bd2fe4b3e8a9ea06c1d0bb2c46171bdbb57c7f7b666524",
+ "techniques": {
+  "T1003": {
+   "name": "OS Credential Dumping",
+   "tactics": [
+    "credential-access"
+   ],
+   "url": "https://attack.mitre.org/techniques/T1003"
+  },
+  "T1003.001": {
+   "name": "LSASS Memory",
+   "tactics": [
+    "credential-access"
+   ],
+   "url": "https://attack.mitre.org/techniques/T1003/001"
+  },
+  "T1021.001": {
+   "name": "Remote Desktop Protocol",
+   "tactics": [
+    "lateral-movement"
+   ],
+   "url": "https://attack.mitre.org/techniques/T1021/001"
+  },
+  "T1027": {
+   "name": "Obfuscated Files or Information",
+   "tactics": [
+    "stealth"
+   ],
+   "url": "https://attack.mitre.org/techniques/T1027"
+  },
+  "T1027.010": {
+   "name": "Command Obfuscation",
+   "tactics": [
+    "stealth"
+   ],
+   "url": "https://attack.mitre.org/techniques/T1027/010"
+  },
+  "T1041": {
+   "name": "Exfiltration Over C2 Channel",
+   "tactics": [
+    "exfiltration"
+   ],
+   "url": "https://attack.mitre.org/techniques/T1041"
+  },
+  "T1047": {
+   "name": "Windows Management Instrumentation",
+   "tactics": [
+    "execution"
+   ],
+   "url": "https://attack.mitre.org/techniques/T1047"
+  },
+  "T1048": {
+   "name": "Exfiltration Over Alternative Protocol",
+   "tactics": [
+    "exfiltration"
+   ],
+   "url": "https://attack.mitre.org/techniques/T1048"
+  },
+  "T1053": {
+   "name": "Scheduled Task/Job",
+   "tactics": [
+    "execution",
+    "persistence",
+    "privilege-escalation"
+   ],
+   "url": "https://attack.mitre.org/techniques/T1053"
+  },
+  "T1053.005": {
+   "name": "Scheduled Task",
+   "tactics": [
+    "execution",
+    "persistence",
+    "privilege-escalation"
+   ],
+   "url": "https://attack.mitre.org/techniques/T1053/005"
+  },
+  "T1059": {
+   "name": "Command and Scripting Interpreter",
+   "tactics": [
+    "execution"
+   ],
+   "url": "https://attack.mitre.org/techniques/T1059"
+  },
+  "T1059.001": {
+   "name": "PowerShell",
+   "tactics": [
+    "execution"
+   ],
+   "url": "https://attack.mitre.org/techniques/T1059/001"
+  },
+  "T1070": {
+   "name": "Indicator Removal",
+   "tactics": [
+    "stealth"
+   ],
+   "url": "https://attack.mitre.org/techniques/T1070"
+  },
+  "T1071": {
+   "name": "Application Layer Protocol",
+   "tactics": [
+    "command-and-control"
+   ],
+   "url": "https://attack.mitre.org/techniques/T1071"
+  },
+  "T1078": {
+   "name": "Valid Accounts",
+   "tactics": [
+    "initial-access",
+    "persistence",
+    "privilege-escalation",
+    "stealth"
+   ],
+   "url": "https://attack.mitre.org/techniques/T1078"
+  },
+  "T1087": {
+   "name": "Account Discovery",
+   "tactics": [
+    "discovery"
+   ],
+   "url": "https://attack.mitre.org/techniques/T1087"
+  },
+  "T1098": {
+   "name": "Account Manipulation",
+   "tactics": [
+    "persistence",
+    "privilege-escalation"
+   ],
+   "url": "https://attack.mitre.org/techniques/T1098"
+  },
+  "T1105": {
+   "name": "Ingress Tool Transfer",
+   "tactics": [
+    "command-and-control"
+   ],
+   "url": "https://attack.mitre.org/techniques/T1105"
+  },
+  "T1110": {
+   "name": "Brute Force",
+   "tactics": [
+    "credential-access"
+   ],
+   "url": "https://attack.mitre.org/techniques/T1110"
+  },
+  "T1110.001": {
+   "name": "Password Guessing",
+   "tactics": [
+    "credential-access"
+   ],
+   "url": "https://attack.mitre.org/techniques/T1110/001"
+  },
+  "T1110.003": {
+   "name": "Password Spraying",
+   "tactics": [
+    "credential-access"
+   ],
+   "url": "https://attack.mitre.org/techniques/T1110/003"
+  },
+  "T1110.004": {
+   "name": "Credential Stuffing",
+   "tactics": [
+    "credential-access"
+   ],
+   "url": "https://attack.mitre.org/techniques/T1110/004"
+  },
+  "T1136": {
+   "name": "Create Account",
+   "tactics": [
+    "persistence"
+   ],
+   "url": "https://attack.mitre.org/techniques/T1136"
+  },
+  "T1136.001": {
+   "name": "Local Account",
+   "tactics": [
+    "persistence"
+   ],
+   "url": "https://attack.mitre.org/techniques/T1136/001"
+  },
+  "T1218.011": {
+   "name": "Rundll32",
+   "tactics": [
+    "stealth"
+   ],
+   "url": "https://attack.mitre.org/techniques/T1218/011"
+  },
+  "T1543.003": {
+   "name": "Windows Service",
+   "tactics": [
+    "persistence",
+    "privilege-escalation"
+   ],
+   "url": "https://attack.mitre.org/techniques/T1543/003"
+  },
+  "T1547.001": {
+   "name": "Registry Run Keys / Startup Folder",
+   "tactics": [
+    "persistence",
+    "privilege-escalation"
+   ],
+   "url": "https://attack.mitre.org/techniques/T1547/001"
+  },
+  "T1569.002": {
+   "name": "Service Execution",
+   "tactics": [
+    "execution"
+   ],
+   "url": "https://attack.mitre.org/techniques/T1569/002"
+  },
+  "T1685.005": {
+   "name": "Clear Windows Event Logs",
+   "tactics": [
+    "defense-impairment"
+   ],
+   "url": "https://attack.mitre.org/techniques/T1685/005"
+  }
+ },
+ "version": "enterprise-attack (latest object modified 2026-10-12)"
+}

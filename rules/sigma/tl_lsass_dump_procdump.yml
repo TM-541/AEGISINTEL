@@ -1,0 +1,25 @@
+title: LSASS Memory Dump via ProcDump
+id: 6b1f2a4e-3c5d-4e8f-9a0b-1c2d3e4f5a02
+status: experimental
+description: Detects ProcDump being used to write a full memory dump of the LSASS process.
+author: AEGISINTEL
+logsource:
+  product: windows
+  category: process_creation
+detection:
+  selection_tool:
+    - Image|endswith:
+        - '\procdump.exe'
+        - '\procdump64.exe'
+    - CommandLine|contains: 'procdump'
+  selection_args:
+    CommandLine|contains|all:
+      - ' -ma '
+      - 'lsass'
+  condition: selection_tool and selection_args
+falsepositives:
+  - Authorised troubleshooting of LSASS by Microsoft support (rare)
+level: critical
+tags:
+  - attack.credential-access
+  - attack.t1003.001
