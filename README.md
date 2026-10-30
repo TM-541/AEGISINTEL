@@ -200,5 +200,5 @@ Python package, `THREATLENS_*` settings and the `threatlens.db` file) are intent
 unchanged, so existing installations keep working.
 
 ## License
-[MIT](LICENSE) for the code. Copyright (c) 2026 Muhammad Talha. MITRE ATT&CK® data is © The MITRE Corporation and used under the
+[MIT](LICENSE) for the code. Copyright (c) 2026 Muhammad Talha. Third-party notices are in [NOTICE](NOTICE). MITRE ATT&CK® data is © The MITRE Corporation and used under the
 [ATT&CK terms of use](https://attack.mitre.org/resources/legal-and-branding/terms-of-use/).
